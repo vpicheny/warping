@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FOR ADDING COLORED COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Co-authors are assigned a colour and they have commands to comment, add and delete text in
+% a way that is tractable by others 
+%  \myname{I make a comment}
+%  \mynamedelete{this text will be striked out}
+%  \mynameadd{this will show in my colour}
+%
+%  David : blue
+%  Victor : orange
+%  Rodo : green
+% 
+%  Examples :  \david{David a fait ce commentaire}   \daviddelete{David a efface ca}  \davidadd{David a ajoute ca en bleu}
+%
+% Other commands are \DEL, \NEW, \NOTE, \TODO , see below further explanations.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The packages below are needed, add them in your main .tex file
+%\usepackage[dvipsnames,svgnames]{xcolor}
+%\usepackage[normalem]{ulem}
+
+
+\definecolor{colorbrewer1}{RGB}{27,158,119}
+			\definecolor{colorbrewer2}{RGB}{217,95,2}
+			\definecolor{colorbrewer3}{RGB}{117,112,179}
+			\definecolor{colorbrewer4}{RGB}{231,41,138}
+			\definecolor{colorbrewer5}{RGB}{102,166,30}
+			\definecolor{colorbrewer6}{RGB}{230,171,2}
+			\definecolor{colorbrewer7}{RGB}{166,118,29}
+			\definecolor{colorbrewer8}{RGB}{102,102,102}
+			
+
+\newcommand{\David}[1]{{\color{blue}[David's comment: #1]}}
+\newcommand{\david}[1]{\David{#1}}
+\newcommand{\daviddelete}[1]{{\color{blue} \sout{#1}}}
+\newcommand{\davidadd}[1]{{\color{blue} #1}}
+
+\newcommand{\rodo}[1]{{\color{green!50!black}[Rodo's comment: #1]}}
+\newcommand{\rodoadd}[1]{{\color{green!50!black} #1}}
+\newcommand{\rododelete}[1]{{\color{green!50!black} \sout{#1}}}
+
+\newcommand{\victor}[1]{{\color{orange}[Victor's comment: #1]}}
+\newcommand{\victordelete}[1]{{\color{orange} \sout{#1}}}
+\newcommand{\victoradd}[1]{{\color{orange} #1}}
+
+% Other commands are \DEL, \NEW, \NOTE, \TODO .
+% All commands create red text and have as optional argument the author.  
+% In the case of TODO, the optional argument may be who needs to do the change.
+% Example:
+%   This is\DEL{ an experimental version of}\NOTE[Rodo]{remark the space within the DEL command}
+%   a \NEW{simple to use} LaTeX markup.\TODO{improve this example}
+%
+% \renewcommand{\markupdraft}[2]{}  % remove all TODO's, notes and coloring of changes
+                                    % like for the final version
+%\usepackage[normalem]{ulem}
+%\usepackage[makeroom]{cancel}
+%------- Meta-command to markup notes and changes and *remove those markups easily*
+\newcommand{\markupdraft}[2]{% {#1: {color|display} command}{#2: desired color or text}
+%  the next lines can be incommented, if respectively certain notes or coloring should disappear
+    \ifthenelse{\equal{#1}{display}}{#2}{}%                 % display only in draft version
+    \ifthenelse{\equal{#1}{color}}{\color{#2}}{}%           % colored only in draft (for \new command)
+}
+% ------ helper commands using \markupdraft, author is optional argument
+\newcommand{\notecolored}[3][]{\markupdraft{display}{{\color{#2}\noindent[Note (#1): #3]}}}
+\newcommand{\newcolored}[3][]{{\markupdraft{color}{#2}#3}%  % kept in the final print
+    \ifthenelse{\equal{#1}{}}{}{\markupdraft{display}{{\color{yellow!70!black}[#1]}}}}
+
+% ------ end user markupdraft-commands, optional argument is the author:
+\newcommand{\DEL}[2][]{{\markupdraft{display}{{\color{yellow!80!black}[removed: "#2"[#1]]}}}} % (to be) removed
+\newcommand{\NEW}[2][]{\newcolored[#1]{red}{#2}}%  % kept in the final print
+\newcommand{\NOTE}[2][]{\notecolored[#1]{red}{#2}}
+\newcommand{\TODO}[2][]{\markupdraft{display}{{\color{red}\noindent++TODO: #2 {\color{yellow!80!black}(#1)}++}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END ADDING COLORED COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
