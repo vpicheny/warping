@@ -7,11 +7,11 @@
 %  \mynamedelete{this text will be striked out}
 %  \mynameadd{this will show in my colour}
 %
-%  David : blue
+%  Coralie : blue
 %  Victor : orange
-%  Rodo : green
+%  Gael : green
 % 
-%  Examples :  \david{David a fait ce commentaire}   \daviddelete{David a efface ca}  \davidadd{David a ajoute ca en bleu}
+%  Examples :  \coralie{Coralie a fait ce commentaire}   \coraliedelete{Coralie a efface ca}  \coralieadd{Coralie a ajoute ca en bleu}
 %
 % Other commands are \DEL, \NEW, \NOTE, \TODO , see below further explanations.
 %
@@ -31,14 +31,14 @@
 			\definecolor{colorbrewer8}{RGB}{102,102,102}
 			
 
-\newcommand{\David}[1]{{\color{blue}[David's comment: #1]}}
-\newcommand{\david}[1]{\David{#1}}
-\newcommand{\daviddelete}[1]{{\color{blue} \sout{#1}}}
-\newcommand{\davidadd}[1]{{\color{blue} #1}}
+\newcommand{\Coralie}[1]{{\color{blue}[Coralie's comment: #1]}}
+\newcommand{\coralie}[1]{\Coralie{#1}}
+\newcommand{\coraliedelete}[1]{{\color{blue} \sout{#1}}}
+\newcommand{\coralieadd}[1]{{\color{blue} #1}}
 
-\newcommand{\rodo}[1]{{\color{green!50!black}[Rodo's comment: #1]}}
-\newcommand{\rodoadd}[1]{{\color{green!50!black} #1}}
-\newcommand{\rododelete}[1]{{\color{green!50!black} \sout{#1}}}
+\newcommand{\gael}[1]{{\color{green!50!black}[Gael's comment: #1]}}
+\newcommand{\gaeladd}[1]{{\color{green!50!black} #1}}
+\newcommand{\gaeldelete}[1]{{\color{green!50!black} \sout{#1}}}
 
 \newcommand{\victor}[1]{{\color{orange}[Victor's comment: #1]}}
 \newcommand{\victordelete}[1]{{\color{orange} \sout{#1}}}
@@ -48,7 +48,7 @@
 % All commands create red text and have as optional argument the author.  
 % In the case of TODO, the optional argument may be who needs to do the change.
 % Example:
-%   This is\DEL{ an experimental version of}\NOTE[Rodo]{remark the space within the DEL command}
+%   This is\DEL{ an experimental version of}\NOTE[Gael]{remark the space within the DEL command}
 %   a \NEW{simple to use} LaTeX markup.\TODO{improve this example}
 %
 % \renewcommand{\markupdraft}[2]{}  % remove all TODO's, notes and coloring of changes
