@@ -112,6 +112,8 @@
 
 \maketitle
 
+\coralie{les figures ne sont pas toutes de la même taille, mais je n'ai pas passé trop de temps dessus avant qu'on se mette d'accord sur celles qui seraient dans l'article ou pas}
+
 \begin{abstract}
 On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut aussi \victordelete{enlever des trucs} ou bien \coralieadd{ajouter d'autres trucs}, \gaeladd{et Gael aussi}.
 \keywords{to do}
@@ -280,7 +282,6 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 To evaluate the benefits of including the warping step in the optimization process (i.e. reducing the parameter space and removing the combinations which lead to the same management), we conducted 50 independent optimizations of sharka management parameters with and without the warping step. The criterion to optimize was the mean of the NPV ($\overline{NPV}$).
 For this to happen, we randomly selected 50 times 200 management strategies using a maximin Latin hypercube sampling design (Fang, Li, and Sudjianto 2005). Then, for every sampling design of 200 strategies, we performed 2 optimizations in parallel (with and without the warping step). For one optimization, we choose sequentially 200 new strategies, resulting in a total of 400 evaluated strategies. These 200 new strategies were selected every time among 100,000 randomly generated candidate points over the parameter space and 10,000 more locally around the best point found. In addition, for each evaluated strategy, 1000 simulations were carried out (with different random seed) to take into account the variability due to the epidemic and landscape characteristics.
 
-
 \subsubsection{Comparison with standard BO}
 
 Description of comparison metrics
@@ -289,15 +290,42 @@ Description of comparison metrics
 
 \coralie{on compare ici les resultats obtenus sans le probleme d identification : avec ton script denoise.results.v6.R. Mais je ne sais pas trop comment l expliquer ici}
 
-We firstly compared the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step. 
+We firstly compared the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step (obtained from the same sampling design). 
 
 In addition, we compared the optimization speed regarding the use or not of the warping step. To this end, we use two different ways. Firstly, we performed a nonlinear regression of $\overline{NPV}$ obtained for all the selected strategies during the optimization process with and without the warping step. We compared the growth parameter c of the following regression:
 $a+b \times exp^{-c\times x}$.
-
 Secondly, we used a specific algorithm developed by \coralie{reference???}. Briefly, we uniformly defined 100 $\alpha$ values between a minimum and a maximum values. Then, for each iteration in the optimization process (i.e. for each of the 200 evaluated strategies), we add the number of optimizations (under 50) which exceed $\alpha$ 1, the number of optimizations (under 50) which exceed $\alpha$ 2, etc., the number of optimizations (under 50) which exceed $\alpha$ 100. We used $\alpha$ $\in$ [0;18,012.12], and then $\alpha$ $\in$ [0;18,012.12]. The value 18,012.12 corresponds to the maximal value of $\overline{NPV}$ identified in whole optimizations.
 
 
 \subsection{Results and insights into the Sharka model}
+
+We firstly subtracting the $\overline{NPV}$ obtained with optimizations with and without the warping step. In 24 out of the 50 optimization cases, we obtained better $\overline{NPV}$ with the warping step than without (Fig.\ref{fig:waping_moins_sanswarping}). This result means that with 200 iterations in the optimization, the final result is not impacted by the use of a warping step.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 0cm 11cm 0cm 6cm, clip]{Figures_Warping_resultats_warping_moins_sanswarping.pdf}
+	\caption{Comparison of $\overline{NPV}$ obtained after optimization with and without warping. }\label{fig:waping_moins_sanswarping}
+\end{figure}
+
+However, we showed that the warping can impact the optimization speed (Fig.\ref{fig:moyennesNPV}). Indeed, the parameter c corresponding to the growth parameter of a nonlinear regression was higher with (0.26) than without (0.18) warping (Fig.\ref{fig:nonlinear_regression}). In addition, we can visually observe that the warping step allow to improve the optimization speed on the Fig.\ref{fig:algococo} which present the results of the Coco algorithm.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 2cm 15cm 5cm 1cm, clip]{Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf}
+	\caption{Comparison of $\overline{NPV}$ obtained after optimization with and without warping. Yellow and blue lines represent the mean of the $\overline{NPV}$ selected at each iteration for the optimizations respectively perfomed with and without the warping step. }\label{fig:moyennesNPV}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 4cm 15cm 4cm 3cm, clip]{Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.pdf}
+	\caption{Non linear regression on $\overline{NPV}$ obtained after optimization with (yellow) and without (blue) warping.}\label{fig:nonlinear_regression}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 2cm 7cm 6cm 8cm, clip]{Figures_Warping_resultats_courbes_algoCoco.pdf}
+	\caption{Results of the Coco algorithm with (yellow) and without (blue) warping.}\label{fig:algococo}
+\end{figure}
 
 \section{Conclusion}
 
