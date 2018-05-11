@@ -289,11 +289,12 @@ Description of comparison metrics
 
 \coralie{on compare ici les resultats obtenus sans le probleme d identification : avec ton script denoise.results.v6.R. Mais je ne sais pas trop comment l expliquer ici}
 
-We firstly compare the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step. 
-In addition, we compare the optimization speed regarding the use of the warping step. To this end, we use two different ways. Firstly, we performed a nonlinear regression of $\overline{NPV}$ obtained for all the selected strategies during the optimization process with and without the warping step. Then we compared the growth parameter c of the following regression:
+We firstly compared the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step. 
+
+In addition, we compared the optimization speed regarding the use or not of the warping step. To this end, we use two different ways. Firstly, we performed a nonlinear regression of $\overline{NPV}$ obtained for all the selected strategies during the optimization process with and without the warping step. We compared the growth parameter c of the following regression:
 $a+b \times exp^{-c\times x}$.
 
-Secondly, we used a specific algorithm developed by \coralie{reference???}. Briefly, we uniformly defined 100 $\alpha$ values between a minimum and a maximum values. Then, for each iteration in the optimization process, we add the number of optimizations (under 50) which exceed $\alpha$ 1, the number of optimizations (under 50) which exceed $\alpha$ 2, …, the number of optimizations (under 50) which exceed $\alpha$ 100. We used $\alpha$ $\in$ [0;18,012.12], and then $\alpha$ $\in$ [0;18,012.12]. The value 18012.12 corresponds to the maximal value of NPV identified in whole optimizations.
+Secondly, we used a specific algorithm developed by \coralie{reference???}. Briefly, we uniformly defined 100 $\alpha$ values between a minimum and a maximum values. Then, for each iteration in the optimization process (i.e. for each of the 200 evaluated strategies), we add the number of optimizations (under 50) which exceed $\alpha$ 1, the number of optimizations (under 50) which exceed $\alpha$ 2, etc., the number of optimizations (under 50) which exceed $\alpha$ 100. We used $\alpha$ $\in$ [0;18,012.12], and then $\alpha$ $\in$ [0;18,012.12]. The value 18,012.12 corresponds to the maximal value of $\overline{NPV}$ identified in whole optimizations.
 
 
 \subsection{Results and insights into the Sharka model}
