@@ -112,7 +112,7 @@
 
 \maketitle
 
-\coralie{les figures ne sont pas toutes de la même taille, mais je n'ai pas passé trop de temps dessus avant qu'on se mette d'accord sur celles qui seraient dans l'article ou pas}
+\coralie{les figures ne sont pas toutes de la meme taille, mais je n'ai pas passe trop de temps dessus avant qu'on se mette d'accord sur celles qui seraient dans l'article ou pas}
 
 \begin{abstract}
 On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut aussi \victordelete{enlever des trucs} ou bien \coralieadd{ajouter d'autres trucs}, \gaeladd{et Gael aussi}.
@@ -121,11 +121,28 @@ On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut 
 
 \section{Introduction}
 \victor{toi ou moi}
-Mathematical modelling for design, in particular in epidemiology
+\textbf{Mathematical modelling for design, in particular in epidemiology}
+
+Mathematical models are increasingly used in many research fields to understand and optimize a process. More particularly, they are useful in epidemiology to predict epidemics and to propose efficient control options. 
+\coralie{(Cunniffe, Koskella, et al. 2015
+Cunniffe et al. 2016
+Mushayabasa and Tapedzesa 2015
+Tildesley et al. 2006
+Bajardi et al. 2012
+Kompas et al. 2017
+VanderWaal et al. 2017
+Grechi et al. 2012).}
+However, these epidemiological studies are moslty focused on improving one control option which generally depends on only one or two parameters in their model, although various control actions are usually applied simultaneously to manage an epidemic. All these actions could be jointly optimized but taking into account numerous management parameters in an optimization problem can be difficult, especially when the management efficiency depends on the interaction between these parameters.
+
 
 \victor{pour toi... mais peut-être plus facile à faire une fois que le reste aura avancé}
 
-The sharka model and objectives
+\textbf{The sharka model and objectives}
+
+In this study, we analyse a simulation model of sharka disease spread and management. This disease, caused by a virus transmitted by aphids through \textit{Prunus} orchard, is one of the most damaging diseases of stone fruit trees belonging to the genus Prunus (e.g. peach, apricot and plum) (Cambra et al. 2006; Rimbaud et al. 2015).
+Our model includes epidemiological parameters which vary between simulations, and various landscapes on which the virus can spread, which means that this model is stochastic. 
+In addition, management parameters allow to simulate orchard surveillance.
+Here, we aim to optimize these management parameters using a efficient optimization algorithm.
 
 \victor{le reste de l'intro pour moi}
 
@@ -156,12 +173,14 @@ Table of invariance relations
 \\
 
 The simulation model that we analyze in this work is a stochastic, spatially explicit, SEIR (susceptible-exposed-infectious-removed) model that simulates sharka spread and management actions (including surveillance, removals and replantations, Pleydell et al. 2018; Rimbaud et al. 2018a, 2018b).
-This model is orchard-based, with a discrete time step of one week. It allows to perform simulations on landscapes composed of uncultivated areas and patches on which peach trees are grown. The patches can be more or less aggregated in the landscape however, we only use in this work the 30 landscapes with a high level of patch aggregation as described by Picard et al. 2018. During the simulation, the trees in the patches are characterized by different states. When the simulation begins, they are not infected: they are in the “susceptible” state. Then, the virus is introduced the first year of the simulation in one of the patches and spreads through orchards, causing changes in tree status: from “susceptible”, they become “exposed” (infected but not yet infectious or symptomatic), “infectious hidden” (after the end of the latent period), “infectious detected” (when specific symptoms are detected on the tree during a survey), and "removed" (when the tree is removed from the patch). In addition, new introductions can also occur during the entire simulation on all patches.
+This model is orchard-based, with a discrete time step of one week. It allows to perform simulations on landscapes composed of uncultivated areas and patches on which peach trees are grown. The patches can be more or less aggregated in the landscape however, we only use in this work the 30 landscapes with a high level of patch aggregation as described by Picard et al. 2018. 
+During the simulation, the trees in the patches are characterized by different states. When the simulation begins, they are not infected: they are in the "susceptible" state. Then, the virus is introduced the first year of the simulation in one of the patches and spreads through orchards (new introductions can also occur during the entire simulation on all patches).
+ The virus causes changes in tree status: from "susceptible", they become "exposed" (infected but not yet infectious or symptomatic), "infectious hidden" (after the end of the latent period), "infectious detected" (when specific symptoms are detected on the tree during a survey), and "removed" (when the tree is removed from the patch). 
 The model output is an economic criterion, the net present value (NPV), which accounts for the benefit generated by the cultivation of productive trees and the costs induced by fruit production and disease management (Rimbaud et al. 2018b).
 
-In addition, in order to simulate wide range of epidemic and management scenarios, the model includes 6 epidemiological and 23 management parameters (Rimbaud et al. 2018b, Picard et al. 2018). In this work, we will use the 6 epidemiological parameters and only 10 management parameters (related to the surveillance of the orchards). They include distances of 3 zones for which the surveys are more or less frequent as well as their duration, the probability of the infected tree detection, and a contamination threshold which can request to improve the surveillance frequency in the focal zone. Details of epidemiological and management parameters used in this study are presented in Fig.\ref{fig:schemagestion} and Table \ref{tab:tableparameters} (this table also includes their variation ranges of the parameters in the model).
+In order to simulate wide range of epidemic and management scenarios, the model includes 6 epidemiological and 23 management parameters (Rimbaud et al. 2018b, Picard et al. 2018). In this work, we will use the 6 epidemiological parameters and only 10 management parameters (related to the surveillance of the orchards). They include distances of 3 zones for which the surveys are more or less frequent as well as their duration, the probability of the infected tree detection, and a contamination threshold which can request to increase the surveillance frequency in the focal zone. Details of epidemiological and management parameters used in this study are presented in Fig.\ref{fig:schemagestion} and Table \ref{tab:tableparameters} (this table also includes the variation ranges of the parameters in the model).
 
-Here, we aim to optimize the management strategy of the disease (i.e. to find the combination of management parameters allowing to obtain the best NPV), taking into account the epidemic stochasticity. However, we note that some combinations of management parameters can represent the same management, which may cause problems in the optimization process. Indeed, we observe that some management parameters are not useful when other parameters have a value of 0, which means that they can take any values without modifying the simulation. For example, when a zone radius is 0, the associated surveillance frequencies have no impact on the NPV (regardless the frequency value). The methodological developments that are proposed in this work address this issue by removing the parameter combinations which lead to the same management. The parameter invariances removed from the model are listed in Table \ref{tab:table_invariances_parameters}.
+Here, we aim to optimize the management strategy of the disease (i.e. to find the combination of management parameters allowing to obtain the best NPV), taking into account the epidemic stochasticity. However, we note that some combinations of management parameters can represent the same management, which may cause problems in the optimization process. Indeed, we observe that some management parameters are not useful when other parameters have a value of 0, which means that they can take any values without modifying the simulation. For example, when a zone radius is 0, the associated surveillance frequency have no impact on the NPV (regardless its value). The methodological developments that are proposed in this work address this issue by removing the parameter combinations which lead to the same management. The parameter invariances removed from the model are listed in Table \ref{tab:table_invariances_parameters}.
 
 
 % Table paras de gestion
@@ -185,7 +204,7 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 		\midrule
 		$\beta$     & Transmission coefficient & 1,25  & 1,39 \\
 		\midrule
-		$\theta_{exp}$  & Variance of the latent period duration (years) & 1,71  & 2,14 \\
+		$\theta_{exp}$  & Expected duration of the latent period duration (years) & 1,71  & 2,14 \\
 		\midrule
 		\multicolumn{4}{|c|}{\textbf{Management parameters}} \\
 		\midrule
@@ -222,7 +241,7 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 % Table invariances paras de gestion
 \begin{table}[htbp]
 	\centering
-	\caption{Invariances of management parameters. For instance, when  $\gamma_{O}$ = 0 or when $\rho$ = 0, $\chi_{o}$ does not have influence on the model output. }
+	\caption{Invariances of management parameters. For instance, when  $\gamma_{O}$ = 0 or when $\rho$ = 0, $\chi_{o}$ does not influence the model output. }
 	\begin{tabular}{|c|c|c|c|c|}
 		\midrule
 		\textbf{Warping} & \textbf{Management parameters} & \textbf{OR} & \textbf{OR} & \textbf{OR} \\
@@ -279,8 +298,8 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 \victor{Premier jet par toi ?}
 \coralie{j'ai l'impression que les parties krigeage et warping devraient se trouer dans cette partie et non pas dans le 5.1.2}
 
-To evaluate the benefits of including the warping step in the optimization process (i.e. reducing the parameter space and removing the combinations which lead to the same management), we conducted 50 independent optimizations of sharka management parameters with and without the warping step. The criterion to optimize was the mean of the NPV ($\overline{NPV}$).
-For this to happen, we randomly selected 50 times 200 management strategies using a maximin Latin hypercube sampling design (Fang, Li, and Sudjianto 2005). Then, for every sampling design of 200 strategies, we performed 2 optimizations in parallel (with and without the warping step). For one optimization, we choose sequentially 200 new strategies, resulting in a total of 400 evaluated strategies. These 200 new strategies were selected every time among 100,000 randomly generated candidate points over the parameter space and 10,000 more locally around the best point found. In addition, for each evaluated strategy, 1000 simulations were carried out (with different random seed) to take into account the variability due to the epidemic and landscape characteristics.
+To evaluate the benefits of including the warping step in the optimization process (i.e. reducing the parameter space removing the combinations which lead to the same management), we conducted 50 independent optimizations of sharka management parameters with and without the warping step. The criterion to optimize was the mean of the NPV ($\overline{NPV}$).
+For this to happen, we randomly selected 50 times 200 management strategies using a maximin Latin hypercube sampling design (Fang, Li, and Sudjianto 2005). Then, for each sampling design of 200 strategies, we performed 2 optimizations in parallel: with and without the warping step. For one optimization, we performed sequentially 200 iterations allowing to choose 200 new strategies, resulting in a total of 400 evaluated strategies.These 200 new strategies were selected each time among 100,000 randomly generated candidate points over the parameter space and 10,000 more locally around the best point found. In addition, for each evaluated strategy, 1000 simulations were carried out (with different random seed) to take into account the variability due to the epidemic and landscape characteristics.
 
 \subsubsection{Comparison with standard BO}
 
@@ -292,39 +311,45 @@ Description of comparison metrics
 
 We firstly compared the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step (obtained from the same sampling design). 
 
-In addition, we compared the optimization speed regarding the use or not of the warping step. To this end, we use two different ways. Firstly, we performed a nonlinear regression of $\overline{NPV}$ obtained for all the selected strategies during the optimization process with and without the warping step. We compared the growth parameter c of the following regression:
+In addition, we compared the optimization speed between the optimizations with or without warping. To this end, we used two different ways. Firstly, we performed a nonlinear regression of $\overline{NPV}$ obtained for all the selected strategies during the optimization process with and without the warping step, and we compared the growth parameter c of the following regression:
 $a+b \times exp^{-c\times x}$.
-Secondly, we used a specific algorithm developed by \coralie{reference???}. Briefly, we uniformly defined 100 $\alpha$ values between a minimum and a maximum values. Then, for each iteration in the optimization process (i.e. for each of the 200 evaluated strategies), we add the number of optimizations (under 50) which exceed $\alpha$ 1, the number of optimizations (under 50) which exceed $\alpha$ 2, etc., the number of optimizations (under 50) which exceed $\alpha$ 100. We used $\alpha$ $\in$ [0;18,012.12], and then $\alpha$ $\in$ [0;18,012.12]. The value 18,012.12 corresponds to the maximal value of $\overline{NPV}$ identified in whole optimizations.
+Secondly, we used a specific algorithm developed by \coralie{reference???}. Briefly, we uniformly defined 100 $\alpha$ values between a minimum and a maximum values. Then, for each iteration performed in the optimization process (i.e. for each of the 200 evaluated strategies), we add: the number of optimizations (under 50) which exceed $\alpha$ 1, the number of optimizations which exceed $\alpha$ 2, ..., the number of optimizations which exceed $\alpha$ 100. We used $\alpha$ $\in$ [0;18,012.12], and then $\alpha$ $\in$ [10,000;18,012.12]. The value 18,012.12 corresponds to the maximal value of $\overline{NPV}$ identified in all the optimizations.
 
 
 \subsection{Results and insights into the Sharka model}
 
-We firstly subtracting the $\overline{NPV}$ obtained with optimizations with and without the warping step. In 24 out of the 50 optimization cases, we obtained better $\overline{NPV}$ with the warping step than without (Fig.\ref{fig:waping_moins_sanswarping}). This result means that with 200 iterations in the optimization, the final result is not impacted by the use of a warping step.
+We firstly subtracting the $\overline{NPV}$ obtained with optimizations with and without the warping step. In 24 out of the 50 optimization cases, we obtained better $\overline{NPV}$ with the warping step than without (Fig.\ref{fig:waping_moins_sanswarping}). This result means that with 200 iterations in the optimization, the final optimization result is not impacted by the use of a warping step.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[trim = 0cm 11cm 0cm 6cm, clip]{Figures_Warping_resultats_warping_moins_sanswarping.pdf}
-	\caption{Comparison of $\overline{NPV}$ obtained after optimization with and without warping. }\label{fig:waping_moins_sanswarping}
+	\caption{Comparison of $\overline{NPV}$ obtained at the end of the optimization with and without warping. }\label{fig:waping_moins_sanswarping}
 \end{figure}
 
-However, we showed that the warping can impact the optimization speed (Fig.\ref{fig:moyennesNPV}). Indeed, the parameter c corresponding to the growth parameter of a nonlinear regression was higher with (0.26) than without (0.18) warping (Fig.\ref{fig:nonlinear_regression}). In addition, we can visually observe that the warping step allow to improve the optimization speed on the Fig.\ref{fig:algococo} which present the results of the Coco algorithm.
+However, we showed that the warping can impact the optimization speed (Fig.\ref{fig:moyennesNPV}). Indeed, the parameter c corresponding to the growth parameter of a nonlinear regression was higher with (0.26) than without (0.18) warping (Fig.\ref{fig:nonlinear_regression}). In addition, we can visually observe that the warping step allow to improve the optimization speed on the Fig.\ref{fig:algococo0} and \ref{fig:algococo10000} which present the results of the algorithm developped by \coralie{reference???}.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[trim = 2cm 15cm 5cm 1cm, clip]{Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf}
-	\caption{Comparison of $\overline{NPV}$ obtained after optimization with and without warping. Yellow and blue lines represent the mean of the $\overline{NPV}$ selected at each iteration for the optimizations respectively perfomed with and without the warping step. }\label{fig:moyennesNPV}
+	\caption{Comparison of $\overline{NPV}$ obtained during optimizations with and without warping. Yellow and blue lines represent the mean of the $\overline{NPV}$ selected at each iteration for the 50 optimizations respectively perfomed with and without the warping step. }\label{fig:moyennesNPV}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[trim = 4cm 15cm 4cm 3cm, clip]{Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.pdf}
-	\caption{Non linear regression on $\overline{NPV}$ obtained after optimization with (yellow) and without (blue) warping.}\label{fig:nonlinear_regression}
+	\caption{Non linear regression on $\overline{NPV}$ obtained at each iteration of the optimizations with (yellow) and without (blue) warping.}\label{fig:nonlinear_regression}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[trim = 2cm 7cm 6cm 8cm, clip]{Figures_Warping_resultats_courbes_algoCoco.pdf}
-	\caption{Results of the Coco algorithm with (yellow) and without (blue) warping.}\label{fig:algococo}
+	\includegraphics[trim = 2cm 7cm 6cm 8cm, clip]{Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf}
+	\caption{Results of the Coco algorithm with (yellow) and without (blue) warping ($\alpha$ $\in$ [0;18,012.12]).}\label{fig:algococo0}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 2cm 7cm 4cm 8cm, clip]{Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf}
+	\caption{Results of the Coco algorithm with (yellow) and without (blue) warping ($\alpha$ $\in$ [10,000;18,012.12]).}\label{fig:algococo10000}
 \end{figure}
 
 \section{Conclusion}

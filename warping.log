@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.24)  11 MAY 2018 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.24)  14 MAY 2018 18:41
 entering extended mode
 **./warping.tex
 (warping.tex
@@ -392,73 +392,39 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 113.
 ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no † in font ptmr7t!
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
-
 [1{C:/Users/rimbaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Missing character: There is no √ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no † in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
 Missing character: There is no † in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--157
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
 [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 170.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
 
-Overfull \hbox (44.37595pt too wide) in paragraph at lines 171--214
+Overfull \hbox (44.37595pt too wide) in paragraph at lines 190--233
  [][][] 
  []
 
-<Figures_Warping_paras_de_gestion.pdf, id=11, 542.025pt x 782.925pt>
+<Figures_Warping_paras_de_gestion.pdf, id=12, 542.025pt x 782.925pt>
 File: Figures_Warping_paras_de_gestion.pdf Graphic file (type pdf)
 <use Figures_Warping_paras_de_gestion.pdf>
 Package pdftex.def Info: Figures_Warping_paras_de_gestion.pdf  used on input li
-ne 218.
+ne 237.
 (pdftex.def)             Requested size: 428.21292pt x 299.22745pt.
 
-Overfull \hbox (90.21292pt too wide) in paragraph at lines 218--219
+Overfull \hbox (90.21292pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
@@ -469,89 +435,113 @@ Missing character: There is no î in font ptmb7t!
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
+[4]
 Overfull \vbox (127.5672pt too high) has occurred while \output is active []
 
 
-[4 <./Figures_Warping_paras_de_gestion.pdf>]
+[5 <./Figures_Warping_paras_de_gestion.pdf>]
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no † in font ptmr7t!
- [5]
-<Figures_Warping_resultats_warping_moins_sanswarping.pdf, id=89, 542.025pt x 78
+
+Underfull \vbox (badness 1478) has occurred while \output is active []
+
+ [6]
+<Figures_Warping_resultats_warping_moins_sanswarping.pdf, id=96, 542.025pt x 78
 2.925pt>
 File: Figures_Warping_resultats_warping_moins_sanswarping.pdf Graphic file (typ
 e pdf)
 <use Figures_Warping_resultats_warping_moins_sanswarping.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_warping_moins_sanswarping.pd
-f  used on input line 306.
+f  used on input line 325.
 (pdftex.def)             Requested size: 542.02367pt x 299.22746pt.
 
-Overfull \hbox (204.02367pt too wide) in paragraph at lines 306--307
+Overfull \hbox (204.02367pt too wide) in paragraph at lines 325--326
  [][] 
  []
 
 <Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf, i
-d=91, 542.025pt x 782.925pt>
+d=98, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.p
 df Graphic file (type pdf)
 <use Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pd
 f>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_moyennes_mean_NPV_wa
-rping_sanswarping.pdf  used on input line 314.
+rping_sanswarping.pdf  used on input line 333.
 (pdftex.def)             Requested size: 342.85489pt x 327.68011pt.
 
-Overfull \hbox (4.85489pt too wide) in paragraph at lines 314--315
+Overfull \hbox (4.85489pt too wide) in paragraph at lines 333--334
  [][] 
  []
 
 <Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.pdf,
- id=93, 542.025pt x 782.925pt>
+ id=100, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping
 .pdf Graphic file (type pdf)
 <use Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.
 pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_regression_lineaire_
-warping_sanswarping.pdf  used on input line 320.
+warping_sanswarping.pdf  used on input line 339.
 (pdftex.def)             Requested size: 314.40219pt x 270.77475pt.
-<Figures_Warping_resultats_courbes_algoCoco.pdf, id=95, 542.025pt x 782.925pt>
-File: Figures_Warping_resultats_courbes_algoCoco.pdf Graphic file (type pdf)
-<use Figures_Warping_resultats_courbes_algoCoco.pdf>
-Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco.pdf  used o
-n input line 326.
+<Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=102, 542.025pt x 78
+2.925pt>
+File: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf Graphic file (type
+ pdf)
+<use Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>
+Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf
+  used on input line 345.
 (pdftex.def)             Requested size: 314.4022pt x 356.13284pt.
-[6] [7 <./Figures_Warping_resultats_warping_moins_sanswarping.pdf>] [8 <./Figur
-es_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf>]
-[9 <./Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping
-.pdf>] [10 <./Figures_Warping_resultats_courbes_algoCoco.pdf>] (warping.aux) ) 
+<Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=104, 542.025pt 
+x 782.925pt>
+File: Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf Graphic file (
+type pdf)
+<use Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>
+Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_10000_18000
+.pdf  used on input line 351.
+(pdftex.def)             Requested size: 371.30757pt x 356.13284pt.
+
+Overfull \hbox (33.30757pt too wide) in paragraph at lines 351--352
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./Figures_Warping_resultats_warping_moins_sanswarping.pdf>] [8 <./Figures_
+Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf>] [9 <./Fig
+ures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.pdf>] [1
+0 <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>] [11 <./Figures_Wa
+rping_resultats_courbes_algoCoco_10000_18000.pdf>] (warping.aux) ) 
 Here is how much of TeX's memory you used:
- 4423 strings out of 493305
- 62975 string characters out of 3131092
- 141641 words of memory out of 3000000
- 7860 multiletter control sequences out of 15000+200000
+ 4429 strings out of 493305
+ 63368 string characters out of 3131092
+ 143650 words of memory out of 3000000
+ 7865 multiletter control sequences out of 15000+200000
  22895 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,1122b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-D:/Mes donnees/Logiciels & informatique/Latex/fonts/enc/dvips/base/8r.enc}<D:/M
-es donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmbsy1
-0.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><D:/Mes donnees/Logiciels & informatique/Late
-x/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Mes donnees/Logiciels & informat
-ique/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Mes donnees/Logiciels &
- informatique/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Mes donnees/Log
-iciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Mes d
-onnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-<D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/c
-msy7.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times/u
-tmb8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times/
-utmr8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on warping.pdf (10 pages, 1122860 bytes).
+ 41i,10n,35p,979b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Mes donne
+es/Logiciels & informatique/Latex/fonts/enc/dvips/base/8r.enc}<D:/Mes donnees/L
+ogiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><D:/Me
+s donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/
+cm/cmmi6.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb><D:/Mes donnees/Logiciels & informatique/Latex/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><D:/Mes donnees/Logiciels & informatiqu
+e/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Mes donnees/Logiciels & inf
+ormatique/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Mes donnees/Logic
+iels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Mes donn
+ees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:
+/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times/utmb
+8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times/utm
+r8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on warping.pdf (11 pages, 1309116 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 252 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
