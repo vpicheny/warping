@@ -81,7 +81,7 @@
 
 \begin{document}
 
-\title{Warping%\thanks{Grants or other notes
+\title{Using input warping to improve the Bayesian optimisation of a complex epidemiological model of the sharka virus %\thanks{Grants or other notes
 %about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
 }
@@ -120,68 +120,69 @@ On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut 
 \end{abstract}
 
 \section{Introduction}
-\victor{toi ou moi}
-\textbf{Mathematical modelling for design, in particular in epidemiology}
 
-Mathematical models are increasingly used in many research fields to understand and optimize a process. More particularly, they are useful in epidemiology to predict epidemics and to propose efficient control options. 
-\coralie{(Cunniffe, Koskella, et al. 2015
-Cunniffe et al. 2016
-Mushayabasa and Tapedzesa 2015
-Tildesley et al. 2006
-Bajardi et al. 2012
-Kompas et al. 2017
-VanderWaal et al. 2017
-Grechi et al. 2012).}
-However, these epidemiological studies are moslty focused on improving one control option which generally depends on only one or two parameters in their model, although various control actions are usually applied simultaneously to manage an epidemic. All these actions could be jointly optimized but taking into account numerous management parameters in an optimization problem can be difficult, especially when the management efficiency depends on the interaction between these parameters.
+Mathematical models are increasingly used in many research fields to understand and optimize a process. For instance, 
+they are useful in epidemiology to predict epidemics and to propose efficient control options 
+\cite{cunniffe2015thirteen,cunniffe2016modeling,mushayabasa2015modeling,tildesley2006optimal,bajardi2012optimizing,kompas2017optimal,vanderwaal2017optimal,grechi2012designing}.
+However, these epidemiological studies are moslty focused on improving one control option which generally depends on only one or two parameters in their model, 
+although various control actions are usually applied simultaneously to manage an epidemic. All these actions could be jointly optimized but taking into account numerous management parameters in an optimization problem can be difficult,
+especially when the management efficiency depends on the interaction between these parameters.
 
-
-\victor{pour toi... mais peut-être plus facile à faire une fois que le reste aura avancé}
-
-\textbf{The sharka model and objectives}
-
-In this study, we analyse a simulation model of sharka disease spread and management. This disease, caused by a virus transmitted by aphids through \textit{Prunus} orchard, is one of the most damaging diseases of stone fruit trees belonging to the genus Prunus (e.g. peach, apricot and plum) (Cambra et al. 2006; Rimbaud et al. 2015).
+In this study, we analyse a simulation model of sharka disease spread and management. This disease, caused by a virus transmitted by aphids through \textit{Prunus} orchard, 
+is one of the most damaging diseases of stone fruit trees belonging to the genus Prunus (e.g. peach, apricot and plum) \cite{cambra2006plum,rimbaud2015sharka}.
 Our model includes epidemiological parameters which vary between simulations, and various landscapes on which the virus can spread, which means that this model is stochastic. 
-In addition, management parameters allow to simulate orchard surveillance.
-Here, we aim to optimize these management parameters using a efficient optimization algorithm.
+In addition, management parameters allow to simulate orchard surveillance. Here, we aim to optimize these management parameters using a efficient optimization algorithm.
 
-\victor{le reste de l'intro pour moi}
+Within the wide range of potential approaches to solve such optimization problems, black-box optimization methods have proven to be popular in this context \cite{rios2013derivative}, 
+in particular because they are in essence non-intrusive: they only require pointwise evaluations of the model at hand (output value for a given set of inputs), 
+as opposed to knowing the underlying mechanisms of the model, structural information, derivatives, etc. This greatly facilitates implementation and avoids developping taylored algorithms.
+In this work, we focus more particularly on the so-called \textit{Bayesian optimization} (BO) approaches \cite{mockus2012bayesian,shahriari2016taking},
+which are well-suited to tackle stochastic and expensive models.
 
-Generalities on optimization
+In some cases, the user possesses relevant information regarding his model that could facilitate the optimization task.
+Accounting for this information within a black-box optimization framework (or rather: \textit{grey box}) may be a challenging task
+as it is, in essence, unnatural. In this work, we focus on a particular type of information, which we refer to as \textit{local invariance}:
+for some values of a subset of parameters, it is known that the model is insensitive to another subset of parameters. 
+As an illustration, take a function $y$ that depends on two discs, parameterized by $x_1=r_1 \in [0, r_{\max}]$ (radius of the first disc) and $x_2=\rho_{12} \in [0,1]$ 
+(ratio between $r_1$ and the radius of the second disc, $r_2$). An action $A_1$ is conveyed on the first disc and another action $A_2$ on the second.
+Setting $x_1=0$, we have $r_2=0$ for any value of $\rho_{12}$, so $y(0, x_2)$ is constant.
 
-Bayesian optimization
+Intuitively, one may want to rework the definition of the parameters to optimize over in order
+to remove the invariances. However (as we show in \ref{sec:model}), such a reformulation his is not always possible.
+Here, we propose to keep the optimisation problem unchanged, and convey the invariance information to the BO algorithm directly, by applying 
+a \textit{warping} \cite{snelson2004warped,snoek2014input} to the parameter space.
 
-Problem at hand: dealing with local invariances
+The remainder of this paper is structured as follow. Section \ref{sec:model} describes the sharka model and its invariances.
+Section \ref{sec:bo} presents the basics of Bayesian optimization and our warping strategy. Finally, section \ref{sec:bo}
+analyses the efficiency of the warping on the sharka model.
 
-Outline
+\section{Model description and problem set-up}\label{sec:model}
 
-\section{Model description and problem set-up}
-\victor{Section à remplir par toi ! Suggestion de plan détaillé.}
+The simulation model that we analyze in this work is a stochastic, spatially explicit, SEIR (susceptible-exposed-infectious-removed) model that simulates sharka spread and management actions 
+\citep[including surveillance, removals and replantations][]{pleydell2018estimation,rimbaud2018using,rimbaud2018heuristic}.
 
-What does it model
+This model is orchard-based, with a discrete time step of one week. It allows to perform simulations on landscapes composed of uncultivated areas and patches on which peach trees are grown. 
+The patches can be more or less aggregated in the landscape however, we only use in this work the 30 landscapes with a high level of patch aggregation as described by \citet{picard2018}. 
+During the simulation, the trees in the patches are characterized by different states. When the simulation begins, they are not infected: they are in the ``susceptible'' state. 
+Then, the virus is introduced the first year of the simulation in one of the patches and spreads through orchards (new introductions can also occur during the entire simulation on all patches).
+ The virus causes changes in tree status: from ``susceptible'', they become ``exposed'' (infected but not yet infectious or symptomatic), ``infectious hidden'' (after the end of the latent period), 
+ ``infectious detected'' (when specific symptoms are detected on the tree during a survey), and ``removed'' (when the tree is removed from the patch). 
+The model output is an economic criterion, the net present value (NPV), which accounts for the benefit generated by the cultivation of productive trees 
+and the costs induced by fruit production and disease management \cite{rimbaud2018heuristic}.
 
-How the model works
+In order to simulate wide range of epidemic and management scenarios, the model includes 6 epidemiological and 23 management parameters \cite{rimbaud2018heuristic,picard2018}. 
+In this work, we will use the 6 epidemiological parameters and only 10 management parameters (related to the surveillance of the orchards). 
+They include distances of 3 zones for which the surveys are more or less frequent as well as their duration, the probability of the infected tree detection, 
+and a contamination threshold which can request to increase the surveillance frequency in the focal zone. 
+Details of epidemiological and management parameters used in this study are presented in Fig.\ref{fig:schemagestion} and Table \ref{tab:tableparameters} 
+(this table also includes the variation ranges of the parameters in the model).
 
-What problem do we want to solve
-
-Inputs description
-
-Invariances descriptions
-
-Table of inputs with range of variation
-
-Table of invariance relations
-\\
-
-The simulation model that we analyze in this work is a stochastic, spatially explicit, SEIR (susceptible-exposed-infectious-removed) model that simulates sharka spread and management actions (including surveillance, removals and replantations, Pleydell et al. 2018; Rimbaud et al. 2018a, 2018b).
-This model is orchard-based, with a discrete time step of one week. It allows to perform simulations on landscapes composed of uncultivated areas and patches on which peach trees are grown. The patches can be more or less aggregated in the landscape however, we only use in this work the 30 landscapes with a high level of patch aggregation as described by Picard et al. 2018. 
-During the simulation, the trees in the patches are characterized by different states. When the simulation begins, they are not infected: they are in the "susceptible" state. Then, the virus is introduced the first year of the simulation in one of the patches and spreads through orchards (new introductions can also occur during the entire simulation on all patches).
- The virus causes changes in tree status: from "susceptible", they become "exposed" (infected but not yet infectious or symptomatic), "infectious hidden" (after the end of the latent period), "infectious detected" (when specific symptoms are detected on the tree during a survey), and "removed" (when the tree is removed from the patch). 
-The model output is an economic criterion, the net present value (NPV), which accounts for the benefit generated by the cultivation of productive trees and the costs induced by fruit production and disease management (Rimbaud et al. 2018b).
-
-In order to simulate wide range of epidemic and management scenarios, the model includes 6 epidemiological and 23 management parameters (Rimbaud et al. 2018b, Picard et al. 2018). In this work, we will use the 6 epidemiological parameters and only 10 management parameters (related to the surveillance of the orchards). They include distances of 3 zones for which the surveys are more or less frequent as well as their duration, the probability of the infected tree detection, and a contamination threshold which can request to increase the surveillance frequency in the focal zone. Details of epidemiological and management parameters used in this study are presented in Fig.\ref{fig:schemagestion} and Table \ref{tab:tableparameters} (this table also includes the variation ranges of the parameters in the model).
-
-Here, we aim to optimize the management strategy of the disease (i.e. to find the combination of management parameters allowing to obtain the best NPV), taking into account the epidemic stochasticity. However, we note that some combinations of management parameters can represent the same management, which may cause problems in the optimization process. Indeed, we observe that some management parameters are not useful when other parameters have a value of 0, which means that they can take any values without modifying the simulation. For example, when a zone radius is 0, the associated surveillance frequency have no impact on the NPV (regardless its value). The methodological developments that are proposed in this work address this issue by removing the parameter combinations which lead to the same management. The parameter invariances removed from the model are listed in Table \ref{tab:table_invariances_parameters}.
-
+Here, we aim to optimize the management strategy of the disease (i.e. to find the combination of management parameters allowing to obtain the best NPV), 
+taking into account the epidemic stochasticity. However, we note that some combinations of management parameters can represent the same management, 
+which may cause problems in the optimization process. Indeed, we observe that some management parameters are not useful when other parameters have a value of 0, 
+which means that they can take any values without modifying the simulation. For example, when a zone radius is 0, the associated surveillance frequency have no impact on the NPV (regardless its value). 
+The methodological developments that are proposed in this work address this issue by removing the parameter combinations which lead to the same management. 
+The parameter invariances removed from the model are listed in Table \ref{tab:table_invariances_parameters}.
 
 % Table paras de gestion
 \begin{table}[htbp]
@@ -234,7 +235,7 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 
 \begin{figure}[!ht]
 	\centering
-\includegraphics[trim = 0cm 16cm 4cm 1cm, clip]{Figures_Warping_paras_de_gestion.pdf}
+\includegraphics[trim = 0cm 16cm 4cm 1cm, clip, width=\textwidth]{Figures_Warping_paras_de_gestion.pdf}
  \caption{Management actions implemented in the model}\label{fig:schemagestion}
 \end{figure}
 
@@ -265,7 +266,7 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 \end{table}%
 
 
-\section{Methods — Bayesian optimization}
+\section{Methods — Bayesian optimization}\label{sec:bo}
 
 \subsection{Overview}
 
@@ -281,13 +282,13 @@ Here, we aim to optimize the management strategy of the disease (i.e. to find th
 
 \subsubsection{Combining warpings}
 
-\section{Experiments on toy problems}
-
-\subsection{Problem descriptions}
-
-\subsection{Comparison metrics}
-
-\subsection{Results}
+% \section{Experiments on toy problems}\label{sec:exp}
+% 
+% \subsection{Problem descriptions}
+% 
+% \subsection{Comparison metrics}
+% 
+% \subsection{Results}
 
 \section{A warping-based Bayesian optimization of the Sharka model}
 
@@ -361,4 +362,6 @@ What we proposed: warping to tackle invariances. Proof of concept
 Possible extensions
 
 \section*{References}
+\bibliographystyle{spbasic}
+\bibliography{refs}
 \end{document}
