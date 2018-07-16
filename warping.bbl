@@ -1,0 +1,161 @@
+\begin{thebibliography}{27}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Bajardi et~al(2012)Bajardi, Barrat, Savini, and
+  Colizza}]{bajardi2012optimizing}
+Bajardi P, Barrat A, Savini L, Colizza V (2012) Optimizing surveillance for
+  livestock disease spreading through animal movements. Journal of the Royal
+  Society Interface 9(76):2814--2825
+
+\bibitem[{Box and Draper(1987)}]{box1987empirical}
+Box GE, Draper NR (1987) Empirical model-building and response surfaces. John
+  Wiley \& Sons
+
+\bibitem[{Cambra et~al(2006)Cambra, Capote, Myrta, and
+  Ll{\'a}cer}]{cambra2006plum}
+Cambra M, Capote N, Myrta A, Ll{\'a}cer G (2006) Plum pox virus and the
+  estimated costs associated with sharka disease. EPPO Bulletin 36(2):202--204
+
+\bibitem[{Cunniffe et~al(2015)Cunniffe, Koskella, Metcalf, Parnell, Gottwald,
+  and Gilligan}]{cunniffe2015thirteen}
+Cunniffe NJ, Koskella B, Metcalf CJE, Parnell S, Gottwald TR, Gilligan CA
+  (2015) Thirteen challenges in modelling plant diseases. Epidemics 10:6--10
+
+\bibitem[{Cunniffe et~al(2016)Cunniffe, Cobb, Meentemeyer, Rizzo, and
+  Gilligan}]{cunniffe2016modeling}
+Cunniffe NJ, Cobb RC, Meentemeyer RK, Rizzo DM, Gilligan CA (2016) Modeling
+  when, where, and how to manage a forest epidemic, motivated by sudden oak
+  death in california. Proceedings of the National Academy of Sciences
+  113(20):5640--5645
+
+\bibitem[{Fang et~al(2005)Fang, Li, and Sudjianto}]{fang2005design}
+Fang KT, Li R, Sudjianto A (2005) Design and modeling for computer experiments.
+  Chapman and Hall/CRC
+
+\bibitem[{Grechi et~al(2012)Grechi, Ould-Sidi, Hilgert, Senoussi, Sauphanor,
+  and Lescourret}]{grechi2012designing}
+Grechi I, Ould-Sidi MM, Hilgert N, Senoussi R, Sauphanor B, Lescourret F (2012)
+  Designing integrated management scenarios using simulation-based and
+  multi-objective optimization: Application to the peach tree--myzus persicae
+  aphid system. Ecological Modelling 246:47--59
+
+\bibitem[{J.~Forrester et~al(2006)J.~Forrester, Keane, and
+  Bressloff}]{forrester2006design}
+J~Forrester AI, Keane AJ, Bressloff NW (2006) Design and analysis of" noisy"
+  computer experiments. AIAA journal 44(10):2331--2339
+
+\bibitem[{Jones et~al(1998)Jones, Schonlau, and Welch}]{jones1998efficient}
+Jones DR, Schonlau M, Welch WJ (1998) Efficient global optimization of
+  expensive black-box functions. Journal of Global optimization 13(4):455--492
+
+\bibitem[{Kompas et~al(2017)Kompas, Ha, Nguyen, East, Roche, and
+  Garner}]{kompas2017optimal}
+Kompas T, Ha PV, Nguyen HTM, East I, Roche S, Garner G (2017) Optimal
+  surveillance against foot-and-mouth disease: the case of bulk milk testing in
+  australia. Australian Journal of Agricultural and Resource Economics
+  61(4):515--538
+
+\bibitem[{Marmin et~al(2018)Marmin, Ginsbourger, Baccou, and
+  Liandrat}]{marmin2018warped}
+Marmin S, Ginsbourger D, Baccou J, Liandrat J (2018) Warped gaussian processes
+  and derivative-based sequential designs for functions with heterogeneous
+  variations. SIAM/ASA Journal on Uncertainty Quantification 6(3):991--1018
+
+\bibitem[{Mockus(2012)}]{mockus2012bayesian}
+Mockus J (2012) Bayesian approach to global optimization: theory and
+  applications, vol~37. Springer Science \& Business Media
+
+\bibitem[{Mushayabasa and Tapedzesa(2015)}]{mushayabasa2015modeling}
+Mushayabasa S, Tapedzesa G (2015) Modeling the effects of multiple intervention
+  strategies on controlling foot-and-mouth disease. BioMed research
+  international 2015
+
+\bibitem[{Picard et~al(2018)Picard, Samuel, Jacquot, and Thébaud}]{picard2018}
+Picard C, Samuel S, Jacquot E, Thébaud G (2018) Analyzing the influence of
+  landscape aggregation on disease spread to improve management strategies. (in
+  prep)
+
+\bibitem[{Picheny et~al(2013)Picheny, Wagner, and
+  Ginsbourger}]{picheny2013benchmark}
+Picheny V, Wagner T, Ginsbourger D (2013) A benchmark of kriging-based infill
+  criteria for noisy optimization. Structural and Multidisciplinary
+  Optimization 48(3):607--626
+
+\bibitem[{Pleydell et~al(2018)Pleydell, Soubeyrand, Dallot, Labonne,
+  Chad{\oe}uf, Jacquot, and Th{\'e}baud}]{pleydell2018estimation}
+Pleydell DR, Soubeyrand S, Dallot S, Labonne G, Chad{\oe}uf J, Jacquot E,
+  Th{\'e}baud G (2018) Estimation of the dispersal distances of an aphid-borne
+  virus in a patchy landscape. PLoS computational biology 14(4):e1006,085
+
+\bibitem[{Rasmussen and Williams(2006)}]{Rasmussen2006}
+Rasmussen CE, Williams C (2006) {Gaussian Processes for Machine Learning}. MIT
+  Press, \urlprefix\url{http://www.gaussianprocess.org/gpml/}
+
+\bibitem[{Rimbaud et~al(2015)Rimbaud, Dallot, Gottwald, Decroocq, Jacquot,
+  Soubeyrand, and Th{\'e}baud}]{rimbaud2015sharka}
+Rimbaud L, Dallot S, Gottwald T, Decroocq V, Jacquot E, Soubeyrand S,
+  Th{\'e}baud G (2015) Sharka epidemiology and worldwide management strategies:
+  learning lessons to optimize disease control in perennial plants. Annual
+  review of phytopathology 53:357--378
+
+\bibitem[{Rimbaud et~al(2018{\natexlab{a}})Rimbaud, Bruchou, Dallot, Pleydell,
+  Jacquot, Soubeyrand, and Th{\'e}baud}]{rimbaud2018using}
+Rimbaud L, Bruchou C, Dallot S, Pleydell DR, Jacquot E, Soubeyrand S,
+  Th{\'e}baud G (2018{\natexlab{a}}) Using sensitivity analysis to identify key
+  factors for the propagation of a plant epidemic. Royal Society open science
+  5(1):171,435
+
+\bibitem[{Rimbaud et~al(2018{\natexlab{b}})Rimbaud, Dallot, Bruchou, Thoyer,
+  Jacquot, Soubeyrand, and Th{\'e}baud}]{rimbaud2018heuristic}
+Rimbaud L, Dallot S, Bruchou C, Thoyer S, Jacquot E, Soubeyrand S, Th{\'e}baud
+  G (2018{\natexlab{b}}) Heuristic optimisation of the management strategy of a
+  plant epidemic using sequential sensitivity analyses. bioRxiv p 315747
+
+\bibitem[{Rios and Sahinidis(2013)}]{rios2013derivative}
+Rios LM, Sahinidis NV (2013) Derivative-free optimization: a review of
+  algorithms and comparison of software implementations. Journal of Global
+  Optimization 56(3):1247--1293
+
+\bibitem[{Roustant et~al(2012)Roustant, Ginsbourger, and
+  Deville}]{Roustant2012}
+Roustant O, Ginsbourger D, Deville Y (2012) {DiceKriging}, {DiceOptim}: Two {R}
+  packages for the analysis of computer experiments by kriging-based
+  metamodeling and optimization. Journal of Statistical Software 51(1):1--55,
+  \urlprefix\url{http://www.jstatsoft.org/v51/i01/}
+
+\bibitem[{Shahriari et~al(2016)Shahriari, Swersky, Wang, Adams, and
+  De~Freitas}]{shahriari2016taking}
+Shahriari B, Swersky K, Wang Z, Adams RP, De~Freitas N (2016) Taking the human
+  out of the loop: A review of bayesian optimization. Proceedings of the IEEE
+  104(1):148--175
+
+\bibitem[{Snelson et~al(2004)Snelson, Ghahramani, and
+  Rasmussen}]{snelson2004warped}
+Snelson E, Ghahramani Z, Rasmussen CE (2004) Warped gaussian processes. In:
+  Advances in neural information processing systems, pp 337--344
+
+\bibitem[{Snoek et~al(2014)Snoek, Swersky, Zemel, and Adams}]{snoek2014input}
+Snoek J, Swersky K, Zemel R, Adams R (2014) Input warping for bayesian
+  optimization of non-stationary functions. In: International Conference on
+  Machine Learning, pp 1674--1682
+
+\bibitem[{Tildesley et~al(2006)Tildesley, Savill, Shaw, Deardon, Brooks,
+  Woolhouse, Grenfell, and Keeling}]{tildesley2006optimal}
+Tildesley MJ, Savill NJ, Shaw DJ, Deardon R, Brooks SP, Woolhouse ME, Grenfell
+  BT, Keeling MJ (2006) Optimal reactive vaccination strategies for a
+  foot-and-mouth outbreak in the uk. Nature 440(7080):83
+
+\bibitem[{VanderWaal et~al(2017)VanderWaal, Enns, Picasso, Alvarez, Perez,
+  Fernandez, Gil, Craft, and Wells}]{vanderwaal2017optimal}
+VanderWaal K, Enns EA, Picasso C, Alvarez J, Perez A, Fernandez F, Gil A, Craft
+  M, Wells S (2017) Optimal surveillance strategies for bovine tuberculosis in
+  a low-prevalence country. Scientific reports 7(1):4140
+
+\end{thebibliography}
