@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -78,6 +78,10 @@ Marmin S, Ginsbourger D, Baccou J, Liandrat J (2018) Warped gaussian processes
   and derivative-based sequential designs for functions with heterogeneous
   variations. SIAM/ASA Journal on Uncertainty Quantification 6(3):991--1018
 
+\bibitem[{Matheron(1963)}]{matheron1963principles}
+Matheron G (1963) Principles of geostatistics. Economic geology
+  58(8):1246--1266
+
 \bibitem[{Mockus(2012)}]{mockus2012bayesian}
 Mockus J (2012) Bayesian approach to global optimization: theory and
   applications, vol~37. Springer Science \& Business Media
@@ -92,6 +96,11 @@ Picard C, Samuel S, Jacquot E, Thébaud G (2018) Analyzing the influence of
   landscape aggregation on disease spread to improve management strategies. (in
   prep)
 
+\bibitem[{Picheny and Ginsbourger(2014)}]{picheny2014noisy}
+Picheny V, Ginsbourger D (2014) Noisy kriging-based optimization methods: a
+  unified implementation within the diceoptim package. Computational Statistics
+  \& Data Analysis 71:1035--1053
+
 \bibitem[{Picheny et~al(2013)Picheny, Wagner, and
   Ginsbourger}]{picheny2013benchmark}
 Picheny V, Wagner T, Ginsbourger D (2013) A benchmark of kriging-based infill
@@ -103,6 +112,11 @@ Picheny V, Wagner T, Ginsbourger D (2013) A benchmark of kriging-based infill
 Pleydell DR, Soubeyrand S, Dallot S, Labonne G, Chad{\oe}uf J, Jacquot E,
   Th{\'e}baud G (2018) Estimation of the dispersal distances of an aphid-borne
   virus in a patchy landscape. PLoS computational biology 14(4):e1006,085
+
+\bibitem[{{R Core Team}(2018)}]{R2018}
+{R Core Team} (2018) R: A Language and Environment for Statistical Computing. R
+  Foundation for Statistical Computing, Vienna, Austria,
+  \urlprefix\url{https://www.R-project.org/}
 
 \bibitem[{Rasmussen and Williams(2006)}]{Rasmussen2006}
 Rasmussen CE, Williams C (2006) {Gaussian Processes for Machine Learning}. MIT

@@ -444,7 +444,7 @@ In the simple invariance case, we propose linear and correlation-based attenuati
 where $r$ is a $\Rset \times \Rset\rightarrow \Rset$ correlation function.
 Typically, $\delta_i$ may be set to the range of variation of $x_i$, so that the condition $\alpha \leq 1$ is ensured.
 Choosing $r$ as the generalized exponential correlation, we have:
-\begin{equation}
+\begin{equation}\label{eq:covw}
    \alpha_\text{exp}(x_i, c_i) = 1 - \exp \left[ - \left(\frac{\lvert x_i - c_i \rvert}{\theta_i}\right)^d \right],
 \end{equation}
 with $\theta_i$ and $d$ positive parameters to be tuned. 
@@ -489,8 +489,9 @@ As in the simple case, linear and correlation-based warpings can be defined as:
  \alpha_\text{lin}(\x_I,  \cc_I) &=& \frac{1}{\card(I)} \sum_{i \in I}\frac{\lvert x_i - c_i \rvert}{\delta_i}, \\
   \alpha_\text{cor}(\x_I,  \cc_I) &=& 1 - r_I(\x_I, \cc_I),
 \end{eqnarray}
-with $r_I$ a $\Rset^{\card(I)} \times \Rset^{\card(I)} \rightarrow \Rset$ correlation function, for instance:
-$$r_I(\x_I, \cc_I) = \exp \left[ - \sum_{i \in I}\left(\frac{\lvert x_i - c_i \rvert}{\theta_i}\right)^d \right] $$
+with $r_I$ a $\Rset^{\card(I)} \times \Rset^{\card(I)} \rightarrow \Rset$ correlation function as in \ref{eq:covw}.
+% , for instance:
+% $$r_I(\x_I, \cc_I) = \exp \left[ - \sum_{i \in I}\left(\frac{\lvert x_i - c_i \rvert}{\theta_i}\right)^d \right] $$
 
 % \begin{equation}
 %  \forall j \in J, \quad \widetilde{x_j} = \overline{x_j} + \left( x_j - \overline{x_j}\right)\max_{i \in I} \alpha(x_i, c_{i}).
@@ -508,9 +509,6 @@ the warping function is the same as in Equation \ref{eq:and}, with now:
 \begin{eqnarray}
   \alpha(\x_I,  \cc_I) &=& 1 - r_A(\mathbf{A} \x_I, \mathbf{b}).\label{eq:aff}
 \end{eqnarray}
-% 
-
-% Figure \ref{fig:def3Dedge} (right) show the deformation of a cubic space with the condition: 
 
 Figure \ref{fig:def3Dedge} shows two deformations of the unit cubic space when $y$ is invariant w.r.t. $x_3$ when 1- $x_1=x_2=0$, and 2-$x_1 = x_2$. 
 On both cases a Gaussian warping (exponential with $d=2$) is applied.
@@ -631,12 +629,16 @@ The original and distorted space is shown in Figure \ref{fig:def3Dcirc}.
 % \subsection{Results}
 
 \subsubsection{Warping parameters tuning}
-\victor{a faire...}
+The linear warping has the advantage of being parameter-free, which comes at a price of a profund modification of the 
+problem topology. The correlation-based warpings have the capability of creating more localized distortions, but depend 
+on range parameters (the $\theta_i$'s in Equation \ref{eq:covw}). Those may be estimated by likelihood maximization
+along with the GP covariance parameters \cite{snoek2014input,marmin2018warped}.
 
-Note that choosing the range of the correlation $r_A$ is non-trivial. A possible solution is $\theta_A = \mathbf{A}^T \boldsymbol{\theta}_I$.
+However, we found in our numerical experiments that choosing the same correlation function for the GP and the warping, and fixing 
+the warping ranges to be 1/10th of the GP ones provided very satisfactory results, while avoiding the extra computational burden.
 
-\subsubsection{BO on warped spaces}
-\victor{a faire...}
+Note that in the case of linear invariances, choosing the range of the correlation $r_A$ is non-trivial, as it is not directly linked to design variables. 
+A possible solution is $\theta_A = \mathbf{A}^T \boldsymbol{\theta}_I$.
 
 \section{A warping-based Bayesian optimization of the Sharka model}
 
@@ -652,13 +654,13 @@ For one optimization, we performed sequentially 200 iterations allowing to choos
 These 200 new strategies were selected each time among 100,000 randomly generated candidate points over the parameter space and 10,000 more locally around the best point found. 
 In addition, for each evaluated strategy, 1000 simulations were carried out (with different random seed) to take into account the variability due to the epidemic and landscape characteristics.
 
-\subsubsection{Comparison with standard BO}
+\subsubsection{Bayesian optimization setup}
+For all experiments, we used the same GP modeling setup, that is, an unknown constant trend (ordinary kriging, \cite{matheron1963principles}) and 
+Matern 5/2 covariance function \cite[][Chapter 4]{Rasmussen2006}. The acquisition function maximized at each step is the expected improvement on the 
+\textit{reinterpolating} model. The maximization is performed by a large-scale random search followed by a local optimization starting for the optimum found by the random search.
+All experiments were conducted in \texttt{R} \cite{R2018}, using code adapted from the \texttt{DiceOptim} package \cite{picheny2014noisy}.
 
-Description of comparison metrics
-
-\victor{Idem juste pour les méthodes de comparaison, je me charge du paragraphe pour dire à quoi on se compare et je m'occupe de la partie krigeage et warping.}
-
-\coralie{on compare ici les resultats obtenus sans le probleme d identification : avec ton script denoise.results.v6.R. Mais je ne sais pas trop comment l expliquer ici}
+\subsubsection{Comparison metrics}
 
 We firstly compared the optimization results by subtracting the $\overline{NPV}$ achieved using the optimization with the warping step and the optimization without the warping step (obtained from the same sampling design). 
 
