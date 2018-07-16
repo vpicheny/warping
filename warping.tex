@@ -337,16 +337,65 @@ case.
 \subsection{Bayesian optimization with invariances}
 
 \subsubsection{Definitions}
-\victor{to link with the problem in Section \ref{sec:model}}
+From Section \ref{sec:model}, we observe that there are cases of invariances involving a single of several variables. 
+Here, we formalize the different situations and generalize some cases.
 
-We can define different conditions:
+We first introduce the following notation (this is purely notation, no actual permutation is performed):
+\begin{eqnarray}
+ y(\x) &=& y(x_i, \x_J, \x_{-iJ})\\
+ \Xset &=& \{\Xset_i, \Xset_J, \Xset_{-iJ} \}
+\end{eqnarray}
+
+\definition[Simple]{We call \textit{simple invariance} the following case: $y$ is invariant with respect to $\x_J$ ($J$ a subset of $\{1, \ldots, d\} \setminus i$) if $x_i = c_i$ ($i \in \{1, \ldots, d\}$):
+\begin{eqnarray*}
+ y(c_i, \x_J, \x_{-iJ}) = y(c_i, \x_J', \x_{-iJ}), \qquad \forall \x_J, \x_J' \in \Xset_J, \x_{-iJ} \in \Xset_{-iJ}.
+\end{eqnarray*}
+}
+This corresponds for instance to the last line of Table \ref{tab:table_invariances_parameters}: the observation frequency $\eta_f$ does not have an effect on the model if the duration of observation $\gamma_O$ is set to zero.
+
+\definition[Or]{We call \textit{``or'' invariance} the following case: $y$ is invariant with respect to $\x_J$ ($J$ a subset of $\{1, \ldots, d\} \setminus I$) if 
+there exists at least one $i \in I$ such that $x_i = c_i$ ($I$ a subset of $\{1, \ldots, d\} \setminus J$):
+\begin{eqnarray*}
+ y(c_i, \x_{I \setminus i}, \x_J, \x_{-IJ}) = y(c_i, \x_{I \setminus i}, \x_J', \x_{-IJ}), \qquad \forall \x_J, \x_J' \in \Xset_J, \x_{I \setminus i}, \in \Xset_{I \setminus i}.
+\end{eqnarray*}
+}
+This corresponds for instance to the fourth line of Table \ref{tab:table_invariances_parameters}: the contamination threshold in the observation zone $\xi_0$  
+does not have an effect on the model if the duration of observation $\gamma_O$ is set to zero or if the probability of detection $\rho$ is set to zero.
+
+\definition[Linear]{We call \textit{linear invariance} the following case:
+$y$ is invariant with respect to $\x_J$ ($J$ a subset of $\{1, \ldots, d\} \setminus I$) 
+if $\mathbf{A} \x_I = \mathbf{b}$, with $I$ a subset of $\{1, \ldots, d\} \setminus J$),
+ $\mathbf{A}$ a matrix of size $p \times \card(I)$ and $\mathbf{b}$ a vector of size $p$:
+\begin{eqnarray*}
+ y(\x_{I}, \x_J) = y(\x_{I}, \x_J'), \qquad \forall \x_J, \x_J' \in \Xset_J, \text{ if } \mathbf{A} \x_I = \mathbf{b}.
+\end{eqnarray*}
+}
+There are two particular cases worth noting:
 \begin{itemize}
- \item SIMPLE: if $x_i = c_i$ then $y$ is invariant w.r.t.  $\x_J$ ($J$ a subset of $\{1, \ldots, d\}$); 
-%  \item MULTIPLE: if $x_i \in \{c_{i1}, \ldots, c_{in}\}$, then $y$ is invariant w.r.t.  $\x_J$ ($J$ a subset of $\{1, \ldots, d\}$); 
- \item AND: if all $\x_I = \cc_I$ then $y$ is invariant w.r.t.  $\x_J$ (both $I$ and $J$ are subsets of $\{1, \ldots, d\}$, and $I \cap J = \emptyset$);
- \item OR: if at least one $\x_I = \cc_I$ then $y$ is invariant w.r.t.  $\x_J$ (both $I$ and $J$ are subsets of $\{1, \ldots, d\}$, and $I \cap J = \emptyset$);
- \item COMBINATION: of the above.
+ \item setting $p=\card(I)$, $\mathbf{A} = \mathbb{I}_p$ and $\mathbf{b}=\cc_I$ results in an ``AND'' condition: $y$ is invariant with respect to $\x_j$ if, $\forall i \in I, x_i=c_i$;
+ \item setting $p=1$, $\mathbf{A}=\left[1, -1 \right]$ results in an invariance under the condition $x_{i1} = x_{i2}$.
 \end{itemize}
+
+%  
+% For the ``AND'' condition, we have $\mathbf{A} = \mathbb{I}_p$ and $\mathbf{b}=\cc_I$.
+% 
+% $y$ is invariant with respect to $\x_J$ ($J$ a subset of $\{1, \ldots, d\} \setminus I$) if 
+% there exists at least one $i \in I$ such that $x_i = c_i$ ($I$ a subset of $\{1, \ldots, d\} \setminus J$)
+% 
+% % \paragraph{Simple invariance} The simplest case involves only a single variable, and can be stated as:
+%  
+% 
+% 
+% \victor{to link with the problem in Section \ref{sec:model}}
+% 
+% We can define different conditions:
+% \begin{itemize}
+%  \item SIMPLE: if $x_i = c_i$ then $y$ is invariant w.r.t.  $\x_J$ ($J$ a subset of $\{1, \ldots, d\}$); 
+% %  \item MULTIPLE: if $x_i \in \{c_{i1}, \ldots, c_{in}\}$, then $y$ is invariant w.r.t.  $\x_J$ ($J$ a subset of $\{1, \ldots, d\}$); 
+%  \item AND: if all $\x_I = \cc_I$ then $y$ is invariant w.r.t.  $\x_J$ (both $I$ and $J$ are subsets of $\{1, \ldots, d\}$, and $I \cap J = \emptyset$);
+%  \item OR: if at least one $\x_I = \cc_I$ then $y$ is invariant w.r.t.  $\x_J$ (both $I$ and $J$ are subsets of $\{1, \ldots, d\}$, and $I \cap J = \emptyset$);
+%  \item COMBINATION: of the above.
+% \end{itemize}
 
 \subsubsection{Principle of input warping}
 \victor{to do...}
