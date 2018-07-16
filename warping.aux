@@ -30,75 +30,80 @@
 \newlabel{eq:ei}{{3}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Bayesian optimization of stochastic simulators}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Bayesian optimization with invariances}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Definitions}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Definition of local invariances}{6}}
+\citation{ginsbourger2013kernels,duvenaud2014automatic}
 \citation{snoek2014input,marmin2018warped}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Principle of input warping}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Simple warping}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Warping based on linear relations}{8}}
-\newlabel{eq:and}{{10}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Warping for a simple invariance}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Three deformations of a 2D space. The local invariance is at $x_1=0$, highlighted with larger lines.}}{9}}
 \newlabel{fig:3defsimple}{{2}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Three GP realizations using warping functions as shown previously.}}{9}}
 \newlabel{fig:simu2Dsimple}{{3}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Warping for linear invariances}{9}}
+\newlabel{eq:and}{{10}{9}}
+\newlabel{eq:aff}{{13}{10}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Left: original space (with the critical edge highlighted). Centered: warping for $c_1=0$ AND $c_2=1$. Right: warping for $x_1 = x_2$.}}{10}}
 \newlabel{fig:def3Dedge}{{4}{10}}
-\newlabel{eq:aff}{{13}{10}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5}Combining warpings}{10}}
 \@writefile{toc}{\contentsline {paragraph}{Independent conditions}{10}}
-\@writefile{toc}{\contentsline {paragraph}{Combinations of simple conditions: ``OR'' invariance}{10}}
-\newlabel{eq:or0}{{14}{10}}
-\citation{fang2005design}
+\@writefile{toc}{\contentsline {paragraph}{Combinations of simple conditions: ``OR'' invariance}{11}}
+\newlabel{eq:or0}{{14}{11}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Warping for $c_1=4$ (left face of the cube) OR $c_2=1$ (front face). Left: original space, right: distorted space. }}{11}}
 \newlabel{fig:def3DORs}{{5}{11}}
 \@writefile{toc}{\contentsline {paragraph}{``Circular'' conditions}{11}}
 \newlabel{eq:or2}{{15}{11}}
-\@writefile{toc}{\contentsline {paragraph}{Remark}{11}}
+\citation{fang2005design}
+\@writefile{toc}{\contentsline {paragraph}{Remark}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Three deformations of a 2D space, with invariance at $x_1=8$ OR $x_2=1$, highlighted with larger lines.}}{12}}
 \newlabel{fig:def2DOR}{{6}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Warping with circular conditions. Left: original space, right: distorted space.}}{12}}
-\newlabel{fig:def3Dcirc}{{7}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}A warping-based Bayesian optimization of the Sharka model}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Numerical setup}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Experiments description}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6}Warping parameters tuning}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.7}BO on warped spaces}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Warping with circular conditions. Left: original space, right: distorted space.}}{13}}
+\newlabel{fig:def3Dcirc}{{7}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}A warping-based Bayesian optimization of the Sharka model}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Numerical setup}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Experiments description}{13}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Comparison with standard BO}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Results and insights into the Sharka model}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Results and insights into the Sharka model}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of $\overline  {NPV}$ obtained at the end of the optimization with and without warping. }}{14}}
+\newlabel{fig:waping_moins_sanswarping}{{8}{14}}
 \bibstyle{spbasic}
 \bibdata{refs}
 \bibcite{bajardi2012optimizing}{{1}{2012}{{Bajardi et~al}}{{Bajardi, Barrat, Savini, and Colizza}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of $\overline  {NPV}$ obtained during optimizations with and without warping. Yellow and blue lines represent the mean of the $\overline  {NPV}$ selected at each iteration for the 50 optimizations respectively perfomed with and without the warping step. }}{15}}
+\newlabel{fig:moyennesNPV}{{9}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{15}}
 \bibcite{box1987empirical}{{2}{1987}{{Box and Draper}}{{}}}
 \bibcite{cambra2006plum}{{3}{2006}{{Cambra et~al}}{{Cambra, Capote, Myrta, and Ll{\'a}cer}}}
 \bibcite{cunniffe2015thirteen}{{4}{2015}{{Cunniffe et~al}}{{Cunniffe, Koskella, Metcalf, Parnell, Gottwald, and Gilligan}}}
 \bibcite{cunniffe2016modeling}{{5}{2016}{{Cunniffe et~al}}{{Cunniffe, Cobb, Meentemeyer, Rizzo, and Gilligan}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of $\overline  {NPV}$ obtained at the end of the optimization with and without warping. }}{14}}
-\newlabel{fig:waping_moins_sanswarping}{{8}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{14}}
-\bibcite{fang2005design}{{6}{2005}{{Fang et~al}}{{Fang, Li, and Sudjianto}}}
-\bibcite{grechi2012designing}{{7}{2012}{{Grechi et~al}}{{Grechi, Ould-Sidi, Hilgert, Senoussi, Sauphanor, and Lescourret}}}
-\bibcite{forrester2006design}{{8}{2006}{{J.~Forrester et~al}}{{J.~Forrester, Keane, and Bressloff}}}
-\bibcite{jones1998efficient}{{9}{1998}{{Jones et~al}}{{Jones, Schonlau, and Welch}}}
-\bibcite{kompas2017optimal}{{10}{2017}{{Kompas et~al}}{{Kompas, Ha, Nguyen, East, Roche, and Garner}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of $\overline  {NPV}$ obtained during optimizations with and without warping. Yellow and blue lines represent the mean of the $\overline  {NPV}$ selected at each iteration for the 50 optimizations respectively perfomed with and without the warping step. }}{15}}
-\newlabel{fig:moyennesNPV}{{9}{15}}
-\bibcite{marmin2018warped}{{11}{2018}{{Marmin et~al}}{{Marmin, Ginsbourger, Baccou, and Liandrat}}}
-\bibcite{mockus2012bayesian}{{12}{2012}{{Mockus}}{{}}}
-\bibcite{mushayabasa2015modeling}{{13}{2015}{{Mushayabasa and Tapedzesa}}{{}}}
-\bibcite{picard2018}{{14}{2018}{{Picard~C.}}{{}}}
-\bibcite{picheny2013benchmark}{{15}{2013}{{Picheny et~al}}{{Picheny, Wagner, and Ginsbourger}}}
-\bibcite{pleydell2018estimation}{{16}{2018}{{Pleydell et~al}}{{Pleydell, Soubeyrand, Dallot, Labonne, Chad{\oe }uf, Jacquot, and Th{\'e}baud}}}
-\bibcite{Rasmussen2006}{{17}{2006}{{Rasmussen and Williams}}{{}}}
+\bibcite{duvenaud2014automatic}{{6}{2014}{{Duvenaud}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Non linear regression on $\overline  {NPV}$ obtained at each iteration of the optimizations with (yellow) and without (blue) warping.}}{16}}
 \newlabel{fig:nonlinear_regression}{{10}{16}}
-\bibcite{rimbaud2015sharka}{{18}{2015}{{Rimbaud et~al}}{{Rimbaud, Dallot, Gottwald, Decroocq, Jacquot, Soubeyrand, and Th{\'e}baud}}}
-\bibcite{rimbaud2018using}{{19}{2018{}}{{Rimbaud et~al}}{{Rimbaud, Bruchou, Dallot, Pleydell, Jacquot, Soubeyrand, and Th{\'e}baud}}}
-\bibcite{rimbaud2018heuristic}{{20}{2018{}}{{Rimbaud et~al}}{{Rimbaud, Dallot, Bruchou, Thoyer, Jacquot, Soubeyrand, and Th{\'e}baud}}}
-\bibcite{rios2013derivative}{{21}{2013}{{Rios and Sahinidis}}{{}}}
+\bibcite{fang2005design}{{7}{2005}{{Fang et~al}}{{Fang, Li, and Sudjianto}}}
+\bibcite{ginsbourger2013kernels}{{8}{2013}{{Ginsbourger et~al}}{{Ginsbourger, Durrande, and Roustant}}}
+\bibcite{grechi2012designing}{{9}{2012}{{Grechi et~al}}{{Grechi, Ould-Sidi, Hilgert, Senoussi, Sauphanor, and Lescourret}}}
+\bibcite{forrester2006design}{{10}{2006}{{J.~Forrester et~al}}{{J.~Forrester, Keane, and Bressloff}}}
+\bibcite{jones1998efficient}{{11}{1998}{{Jones et~al}}{{Jones, Schonlau, and Welch}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results of the Coco algorithm with (yellow) and without (blue) warping ($\alpha $ $\in $ [0;18,012.12]).}}{17}}
 \newlabel{fig:algococo0}{{11}{17}}
-\bibcite{Roustant2012}{{22}{2012}{{Roustant et~al}}{{Roustant, Ginsbourger, and Deville}}}
-\bibcite{shahriari2016taking}{{23}{2016}{{Shahriari et~al}}{{Shahriari, Swersky, Wang, Adams, and De~Freitas}}}
-\bibcite{snelson2004warped}{{24}{2004}{{Snelson et~al}}{{Snelson, Ghahramani, and Rasmussen}}}
-\bibcite{snoek2014input}{{25}{2014}{{Snoek et~al}}{{Snoek, Swersky, Zemel, and Adams}}}
-\bibcite{tildesley2006optimal}{{26}{2006}{{Tildesley et~al}}{{Tildesley, Savill, Shaw, Deardon, Brooks, Woolhouse, Grenfell, and Keeling}}}
+\bibcite{kompas2017optimal}{{12}{2017}{{Kompas et~al}}{{Kompas, Ha, Nguyen, East, Roche, and Garner}}}
+\bibcite{marmin2018warped}{{13}{2018}{{Marmin et~al}}{{Marmin, Ginsbourger, Baccou, and Liandrat}}}
+\bibcite{mockus2012bayesian}{{14}{2012}{{Mockus}}{{}}}
+\bibcite{mushayabasa2015modeling}{{15}{2015}{{Mushayabasa and Tapedzesa}}{{}}}
+\bibcite{picard2018}{{16}{2018}{{Picard~C.}}{{}}}
+\bibcite{picheny2013benchmark}{{17}{2013}{{Picheny et~al}}{{Picheny, Wagner, and Ginsbourger}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Results of the Coco algorithm with (yellow) and without (blue) warping ($\alpha $ $\in $ [10,000;18,012.12]).}}{18}}
 \newlabel{fig:algococo10000}{{12}{18}}
-\bibcite{vanderwaal2017optimal}{{27}{2017}{{VanderWaal et~al}}{{VanderWaal, Enns, Picasso, Alvarez, Perez, Fernandez, Gil, Craft, and Wells}}}
+\bibcite{pleydell2018estimation}{{18}{2018}{{Pleydell et~al}}{{Pleydell, Soubeyrand, Dallot, Labonne, Chad{\oe }uf, Jacquot, and Th{\'e}baud}}}
+\bibcite{Rasmussen2006}{{19}{2006}{{Rasmussen and Williams}}{{}}}
+\bibcite{rimbaud2015sharka}{{20}{2015}{{Rimbaud et~al}}{{Rimbaud, Dallot, Gottwald, Decroocq, Jacquot, Soubeyrand, and Th{\'e}baud}}}
+\bibcite{rimbaud2018using}{{21}{2018{}}{{Rimbaud et~al}}{{Rimbaud, Bruchou, Dallot, Pleydell, Jacquot, Soubeyrand, and Th{\'e}baud}}}
+\bibcite{rimbaud2018heuristic}{{22}{2018{}}{{Rimbaud et~al}}{{Rimbaud, Dallot, Bruchou, Thoyer, Jacquot, Soubeyrand, and Th{\'e}baud}}}
+\bibcite{rios2013derivative}{{23}{2013}{{Rios and Sahinidis}}{{}}}
+\bibcite{Roustant2012}{{24}{2012}{{Roustant et~al}}{{Roustant, Ginsbourger, and Deville}}}
+\bibcite{shahriari2016taking}{{25}{2016}{{Shahriari et~al}}{{Shahriari, Swersky, Wang, Adams, and De~Freitas}}}
+\bibcite{snelson2004warped}{{26}{2004}{{Snelson et~al}}{{Snelson, Ghahramani, and Rasmussen}}}
+\bibcite{snoek2014input}{{27}{2014}{{Snoek et~al}}{{Snoek, Swersky, Zemel, and Adams}}}
+\bibcite{tildesley2006optimal}{{28}{2006}{{Tildesley et~al}}{{Tildesley, Savill, Shaw, Deardon, Brooks, Woolhouse, Grenfell, and Keeling}}}
+\bibcite{vanderwaal2017optimal}{{29}{2017}{{VanderWaal et~al}}{{VanderWaal, Enns, Picasso, Alvarez, Perez, Fernandez, Gil, Craft, and Wells}}}
