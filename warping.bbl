@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -35,9 +35,19 @@ Cunniffe NJ, Cobb RC, Meentemeyer RK, Rizzo DM, Gilligan CA (2016) Modeling
   death in california. Proceedings of the National Academy of Sciences
   113(20):5640--5645
 
+\bibitem[{Duvenaud(2014)}]{duvenaud2014automatic}
+Duvenaud D (2014) Automatic model construction with gaussian processes. PhD
+  thesis, University of Cambridge
+
 \bibitem[{Fang et~al(2005)Fang, Li, and Sudjianto}]{fang2005design}
 Fang KT, Li R, Sudjianto A (2005) Design and modeling for computer experiments.
   Chapman and Hall/CRC
+
+\bibitem[{Ginsbourger et~al(2013)Ginsbourger, Durrande, and
+  Roustant}]{ginsbourger2013kernels}
+Ginsbourger D, Durrande N, Roustant O (2013) Kernels and designs for modelling
+  invariant functions: From group invariance to additivity. In: mODa
+  10--Advances in Model-Oriented Design and Analysis, Springer, pp 107--115
 
 \bibitem[{Grechi et~al(2012)Grechi, Ould-Sidi, Hilgert, Senoussi, Sauphanor,
   and Lescourret}]{grechi2012designing}

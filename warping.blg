@@ -1,3 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: warping.aux
 The style file: spbasic.bst
+Illegal, another \bibstyle command---line 172 of file warping.aux
+ : \bibstyle
+ :          {spbasic}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 173 of file warping.aux
+ : \bibdata
+ :         {refs}
+I'm skipping whatever remains of this command
 Database file #1: refs.bib
+(There were 2 error messages)
