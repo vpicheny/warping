@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.24)  17 JUL 2018 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.24)  17 JUL 2018 17:22
 entering extended mode
 **./warping.tex
 (warping.tex
@@ -395,14 +395,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 SVJour3 Warning: Title too long for running head.
 Please supply a shorter form with \titlerunning prior to \maketitle
-[1{C:/Users/rimbaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+Underfull \vbox (badness 5490) has occurred while \output is active []
+
+ [1{C:/Users/rimbaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \vbox (badness 1484) has occurred while \output is active []
 
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 201.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 198.
 
-Overfull \hbox (25.15973pt too wide) in paragraph at lines 202--227
+Overfull \hbox (25.15973pt too wide) in paragraph at lines 199--224
  [][][] 
  []
 
@@ -411,10 +414,10 @@ Overfull \hbox (25.15973pt too wide) in paragraph at lines 202--227
 File: Figures_Warping_paras_de_gestion.pdf Graphic file (type pdf)
 <use Figures_Warping_paras_de_gestion.pdf>
 Package pdftex.def Info: Figures_Warping_paras_de_gestion.pdf  used on input li
-ne 231.
+ne 228.
 (pdftex.def)             Requested size: 338.0pt x 236.20047pt.
  [4 <./Figures_Warping_paras_de_gestion.pdf>] [5] [6]
-Overfull \hbox (4.9855pt too wide) in paragraph at lines 404--407
+Overfull \hbox (4.9855pt too wide) in paragraph at lines 401--404
 \OT1/ptm/m/n/10 to han-dle this prob-lem is to dis-tort lo-cally the space so t
 hat the sub-space $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OT
 1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x[] \OT1/c
@@ -425,58 +428,58 @@ mr/m/n/10 =
 <def2Dsimple.pdf, id=104, 578.16pt x 433.62pt>
 File: def2Dsimple.pdf Graphic file (type pdf)
 <use def2Dsimple.pdf>
-Package pdftex.def Info: def2Dsimple.pdf  used on input line 465.
+Package pdftex.def Info: def2Dsimple.pdf  used on input line 462.
 (pdftex.def)             Requested size: 270.40103pt x 202.79572pt.
 <simu2Dsimple.pdf, id=105, 578.16pt x 433.62pt>
 File: simu2Dsimple.pdf Graphic file (type pdf)
 <use simu2Dsimple.pdf>
-Package pdftex.def Info: simu2Dsimple.pdf  used on input line 472.
+Package pdftex.def Info: simu2Dsimple.pdf  used on input line 469.
 (pdftex.def)             Requested size: 338.0pt x 105.88318pt.
  [8] [9 <./simu2Dsimple.pdf> <./def2Dsimple.pdf>]
 <def3Dedge.pdf, id=126, 256.96pt x 256.96pt>
 File: def3Dedge.pdf Graphic file (type pdf)
 <use def3Dedge.pdf>
-Package pdftex.def Info: def3Dedge.pdf  used on input line 523.
+Package pdftex.def Info: def3Dedge.pdf  used on input line 520.
 (pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
 <defAND.pdf, id=127, 256.96pt x 256.96pt>
 File: defAND.pdf Graphic file (type pdf)
 <use defAND.pdf>
-Package pdftex.def Info: defAND.pdf  used on input line 524.
+Package pdftex.def Info: defAND.pdf  used on input line 521.
 (pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
 <def3Daff.pdf, id=128, 256.96pt x 256.96pt>
 File: def3Daff.pdf Graphic file (type pdf)
 <use def3Daff.pdf>
-Package pdftex.def Info: def3Daff.pdf  used on input line 525.
+Package pdftex.def Info: def3Daff.pdf  used on input line 522.
 (pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
 <def3DORs.pdf, id=129, 256.96pt x 256.96pt>
 File: def3DORs.pdf Graphic file (type pdf)
 <use def3DORs.pdf>
-Package pdftex.def Info: def3DORs.pdf  used on input line 561.
+Package pdftex.def Info: def3DORs.pdf  used on input line 558.
 (pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
 <def3DOR2s.pdf, id=130, 256.96pt x 256.96pt>
 File: def3DOR2s.pdf Graphic file (type pdf)
 <use def3DOR2s.pdf>
-Package pdftex.def Info: def3DOR2s.pdf  used on input line 562.
+Package pdftex.def Info: def3DOR2s.pdf  used on input line 559.
 (pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
  [10 <./def3Dedge.pdf> <./defAND.pdf> <./def3Daff.pdf>]
 <def2DOR.pdf, id=204, 578.16pt x 433.62pt>
 File: def2DOR.pdf Graphic file (type pdf)
 <use def2DOR.pdf>
-Package pdftex.def Info: def2DOR.pdf  used on input line 596.
+Package pdftex.def Info: def2DOR.pdf  used on input line 593.
 (pdftex.def)             Requested size: 270.40103pt x 202.79572pt.
 <def3Dcirc1.pdf, id=205, 256.96pt x 256.96pt>
 File: def3Dcirc1.pdf Graphic file (type pdf)
 <use def3Dcirc1.pdf>
-Package pdftex.def Info: def3Dcirc1.pdf  used on input line 624.
+Package pdftex.def Info: def3Dcirc1.pdf  used on input line 621.
 (pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
 <def3Dcirc2.pdf, id=206, 256.96pt x 256.96pt>
 File: def3Dcirc2.pdf Graphic file (type pdf)
 <use def3Dcirc2.pdf>
-Package pdftex.def Info: def3Dcirc2.pdf  used on input line 625.
+Package pdftex.def Info: def3Dcirc2.pdf  used on input line 622.
 (pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
  [11 <./def3DORs.pdf> <./def3DOR2s.pdf>] [12 <./def2DOR.pdf> <./def3Dcirc1.pdf>
  <./def3Dcirc2.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 667.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 664.
 
 
 ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\psnfss\ot1pcr.fd"
@@ -491,7 +494,7 @@ File: Figures_Warping_resultats_warping_moins_sanswarping.pdf Graphic file (typ
 e pdf)
 <use Figures_Warping_resultats_warping_moins_sanswarping.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_warping_moins_sanswarping.pd
-f  used on input line 692.
+f  used on input line 689.
 (pdftex.def)             Requested size: 338.0pt x 182.72787pt.
 
 [14 <./Figures_Warping_resultats_warping_moins_sanswarping.pdf>]
@@ -502,7 +505,7 @@ df Graphic file (type pdf)
 <use Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pd
 f>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_moyennes_mean_NPV_wa
-rping_sanswarping.pdf  used on input line 703.
+rping_sanswarping.pdf  used on input line 700.
 (pdftex.def)             Requested size: 338.0pt x 191.75992pt.
 <Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.pdf,
  id=339, 542.025pt x 782.925pt>
@@ -511,7 +514,7 @@ File: Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping
 <use Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarping.
 pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_regression_lineaire_
-warping_sanswarping.pdf  used on input line 710.
+warping_sanswarping.pdf  used on input line 707.
 (pdftex.def)             Requested size: 338.0pt x 226.78647pt.
 <Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=341, 542.025pt x 78
 2.925pt>
@@ -519,7 +522,7 @@ File: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf Graphic file (type
  pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf
-  used on input line 716.
+  used on input line 713.
 (pdftex.def)             Requested size: 338.0pt x 195.09474pt.
 <Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=343, 542.025pt 
 x 782.925pt>
@@ -527,25 +530,34 @@ File: Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf Graphic file (
 type pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_10000_18000
-.pdf  used on input line 722.
+.pdf  used on input line 719.
 (pdftex.def)             Requested size: 338.0pt x 195.78606pt.
- (warping.bbl
+
+Overfull \hbox (8.44667pt too wide) in paragraph at lines 729--732
+\OT1/ptm/m/n/10 In or-der to tackle in-vari-ances due to the man-age-ment pa-ra
+m-e-ters, we adapted a Bayesian
+ []
+
 [15 <./Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.
 pdf>]
-Underfull \vbox (badness 2158) has occurred while \output is active []
+Underfull \vbox (badness 1348) has occurred while \output is active []
 
  [16 <./Figures_Warping_resultats_courbes_regression_lineaire_warping_sanswarpi
-ng.pdf> <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>]
+ng.pdf> <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>] (warping.bb
+l
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18])
-[19] (warping.aux) ) 
+ [19])
+[20] (warping.aux) ) 
 Here is how much of TeX's memory you used:
  4649 strings out of 493305
  67813 string characters out of 3131092
@@ -553,7 +565,7 @@ Here is how much of TeX's memory you used:
  8064 multiletter control sequences out of 15000+200000
  27161 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,691b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,35p,1085b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Mes donnees/Logiciels & informatique/Latex/fonts/enc/dv
 ips/base/8r.enc}<D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/publ
 ic/amsfonts/cm/cmbsy10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts
@@ -581,9 +593,9 @@ pe1/public/amsfonts/symbols/msbm10.pfb><D:/Mes donnees/Logiciels & informatique
 que/Latex/fonts/type1/urw/times/utmb8a.pfb><D:/Mes donnees/Logiciels & informat
 ique/Latex/fonts/type1/urw/times/utmr8a.pfb><D:/Mes donnees/Logiciels & informa
 tique/Latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on warping.pdf (19 pages, 7171482 bytes).
+Output written on warping.pdf (20 pages, 7173709 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
+ 498 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
