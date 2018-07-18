@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -60,6 +60,12 @@ Grechi I, Ould-Sidi MM, Hilgert N, Senoussi R, Sauphanor B, Lescourret F (2012)
   Bressloff}]{forrester2006design}
 J~Forrester AI, Keane AJ, Bressloff NW (2006) Design and analysis of" noisy"
   computer experiments. AIAA journal 44(10):2331--2339
+
+\bibitem[{Jalali et~al(2017)Jalali, Van~Nieuwenhuyse, and
+  Picheny}]{jalali2017comparison}
+Jalali H, Van~Nieuwenhuyse I, Picheny V (2017) Comparison of kriging-based
+  algorithms for simulation optimization with heterogeneous noise. European
+  Journal of Operational Research 261(1):279--301
 
 \bibitem[{Jones et~al(1998)Jones, Schonlau, and Welch}]{jones1998efficient}
 Jones DR, Schonlau M, Welch WJ (1998) Efficient global optimization of

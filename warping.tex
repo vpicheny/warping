@@ -38,7 +38,7 @@
 %
 \RequirePackage{fix-cm}
 %
-%\documentclass{svjour3}                     % onecolumn (standard format)
+% \documentclass{svjour3}                     % onecolumn (standard format)
 %\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
 \documentclass[smallextended]{svjour3}       % onecolumn (second format)
 %\documentclass[twocolumn]{svjour3}          % twocolumn
@@ -117,13 +117,22 @@
 
 \maketitle
 
-On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut aussi \victordelete{enlever des trucs} ou bien \coralieadd{ajouter d'autres trucs}, \gaeladd{et Gael aussi}.
+% On peut \victor{faire un commentaire} \coralie{chacun avec sa couleur}, on peut aussi \victordelete{enlever des trucs} ou bien \coralieadd{ajouter d'autres trucs}, \gaeladd{et Gael aussi}.
 
 \begin{abstract}
-Optimizing mathematical model parameters remains a challenge in many research fields, in particular when these parameters are numerous and when the model result depends on their interaction. In this work, we focus on a Bayesian optimization approach, accounting for the local invariances of the parameters (that means that for some values of a subset of parameters, the model is insensitive to another subset of parameters). To this end, we apply a warping to the parameter space. This approach was tested on a simulation model of sharka disease spread and management. This disease is caused by a virus which induces numerous damages on \textit{Prunus} trees.
-Specifically, we analyzed the contribution of the warping on the optimization of sharka control options. We show that the final result of the optimization is not impacted by the use of the warping. However, it impacts the optimization speed. Indeed, the optimization process with warping allowed finding the best result faster than without. Such warping process could be used for various optimization issues presenting invariances in order to reduce the calculation time.
-
-
+Optimizing black-box numerical models remains a challenge in many research fields. 
+In this work, we focus on a Bayesian optimization approach, accounting for local invariances of the model with respect to its input variables.
+More precisely, we incorporate the prior knowleddge that the model is insensitive to variations of some of its input variables 
+when other input variables take a particular value. To this end, we propose a new warping technique applied to the parameter space
+that encode the invariances. 
+This approach is tested on a simulation model of sharka disease spread and management that exhibits several invariances. 
+% This disease is caused by a virus which induces numerous damages on \textit{Prunus} trees.
+We analyze the contribution of the warping on the Bayesian optimization of sharka control options. 
+We show that the warping step significantly improves the rate of convergence of the BO algorithm.
+% 
+% We show that the final result of the optimization is not impacted by the use of the warping. 
+% However, it impacts the optimization speed. Indeed, the optimization process with warping allowed finding the best result faster than without. 
+% Such warping process could be used for various optimization issues presenting invariances in order to reduce the calculation time.
 \keywords{Bayesian optimisation, warping, spatio temporal model, sharka}
 \end{abstract}
 
@@ -654,8 +663,8 @@ we conducted 50 independent optimizations of sharka management parameters with a
 For this to happen, we randomly selected 50 times 200 management strategies using a maximin Latin hypercube sampling design \cite{fang2005design}. 
 Then, for each sampling design of 200 strategies, we performed 2 optimizations in parallel: with and without the warping step. 
 For one optimization, we performed sequentially 200 iterations allowing to choose 200 new strategies, resulting in a total of 400 evaluated strategies.
-These 200 new strategies were selected each time among 100,000 randomly generated candidate points over the parameter space and 10,000 more locally around the best point found. 
-In addition, for each evaluated strategy, 1000 simulations were carried out (with different random seed) to take into account the variability due to the epidemic and landscape characteristics.
+For each evaluated strategy, the objective function is computed by averaging over 1,000 simulations (carried out with different random seeds) 
+to take into account the variability due to the epidemic and landscape characteristics.
 
 \subsubsection{Bayesian optimization setup}
 For all experiments, we used the same GP modeling setup, that is, an unknown constant trend (ordinary kriging, \cite{matheron1963principles}) and 
@@ -721,23 +730,51 @@ which present the results of the algorithm developped by \coralie{reference???}.
 \end{figure}
 
 \section{Conclusion}
+In this study, we showed how a Bayesian optimization process can be improved by accounting for some prior structural information: 
+the insensitivity of the model with respect to a subset of its input variables when another subset of inputs takes a particular value.
+Such \textit{local invariances} were exhibited by our
+% the parameter invariances. 
+% These invariances correspond to the insensitivity of the model to a subset of parameters for some values of another subset of parameters. 
+% Here, we take as an example the optimization problem of sharka control. 
+% In our study, we used a
+spatiotemporal model simulating sharka management, characterized by 10 parameters related to the surveillance of the orchards. 
+In this example, the invariances arise because parameters (radius of different zones, surveillance frequency in each zone, detection probability of infected trees, 
+and duration of observation zones) are strongly related. Indeed, we easily note, for instance, that when the detection probability takes a value of 0, 
+numerous other parameters do not influence the model results. 
+% 
+% Firstly, we presented how we took into account such invariances in the Bayesian optimization process with the warping. 
+% Then, we applied this process to the sharka model in order to analyze the warping efficiency.
 
-In this study, we showed how a Bayesian optimization process can be improved accounting for the parameter invariances. These invariances correspond to the insensitivity of the model to a subset of parameters for some values of another subset of parameters. Here, we take as an example the optimization problem of sharka control. In our study, we used a spatiotemporal model simulating sharka management characterized by 10 parameters related to the surveillance of the orchards. In this example, the invariances arise because parameters (radius of different zones, surveillance frequency in each zone, detection probability of infected trees, and duration of observation zones) are strongly related. Indeed, we easily note, for instance, that when the detection probability takes a value of 0, numerous other parameters do not influence the model results. Firstly, we presented how we took into account such invariances in the Bayesian optimization process with the warping. Then, we applied this process to the sharka model in order to analyze the warping efficiency.
+To tackle this problem, we proposed to use a warping of the input space, that here amounted to remove locally dimensions of the input space.
+The warping we used is based on correlation functions, making it very simple to implement while allowing sufficient flexibility.
+A particular advantage of input warping over other approaches is that it can be straightforwardly embedded in a BO algorithm.
+% 
+% In order to tackle invariances due to the management parameters, we adapted a Bayesian optimization algorithm by including a warping to the parameter space.
 
-\subsection{Bayesian optimization and warping strategy}
+We applied this Bayesian optimization process to the spatio temporal sharka model. We performed various optimizations of its management parameters 
+firstly with the use of warping (which allows accounting for the invariances) and then without. 
+We showed that both approaches led to the same solutions, but the the optimization process with warping was substantially faster,
+showing that the warping efficiently reduced the search space without tampering the exploration / exploitation trade-off.
 
-In order to tackle invariances due to the management parameters, we adapted a Bayesian optimization process including warping conditions to the parameter space.
-\coralie{peut etre a etoffer}
-We applied this Bayesian optimization process to the spatio temporal sharka model. We performed various optimizations of its management parameters firstly with the use of warping (which allows accounting for the invariances) and then without. We showed that the optimization results are not impacted by the use of the warping. This means that if the optimization process includes enough iterations, the warping does not improve the result. Nevertheless, the optimization speed was impacted: the optimization process with warping was faster than without. This shows that we could perform less iterations to obtain the same result, which means we could save time.
-
-Thus, in order to reduce the calculation time, such warping approach could be used for various optimization issues presenting invariances. For instance, we could use it to optimize all management parameters included in the spatio temporal sharka model developed by Rimbaud et al.
-\cite{rimbaud2018heuristic} 
-(here, we optimized only 10 out of 23 management parameters included in the model). Nevertheless, it may be difficult to define the minimum number of iteration to perform to reach the optimal value. However, the warping use cannot affect negatively the optimization performance. Indeed, if numerous iterations are performed, the warping use will probably be unnecessary. Conversely, if the number of iterations is limited, the warping can allow obtaining better results.
-
-
-\subsection{Possible extensions}
+As future steps for this research, we could first embed learning the warping parameters together with the parameters of the GP covariance 
+in a single likelihood maximization step. Another room for improvement is to adapt the EI maximization step to the new topology induced by the warping
+(here, on all experiments the EI was maximized over the original space). Finally, the optimization strategy pursued here used a large fixed number of 
+repetitions (1,000) for each design evaluated. Combining warping with an efficient scheme to handle repetitions \cite{jalali2017comparison} would drastically reduce the cost 
+of the optimization.
 
 
+
+% We showed that the optimization results are not impacted by the use of the warping. 
+% This means that if the optimization process includes enough iterations, the warping does not improve the result. Nevertheless, the optimization speed was impacted: 
+% the optimization process with warping was faster than without. This shows that we could perform less iterations to obtain the same result, which means we could save time.
+% 
+% Thus, in order to reduce the calculation time, such warping approach could be used for various optimization issues presenting invariances. 
+% For instance, we could use it to optimize all management parameters included in the spatio temporal sharka model developed by Rimbaud et al.
+% \cite{rimbaud2018heuristic} 
+% (here, we optimized only 10 out of 23 management parameters included in the model). 
+% Nevertheless, it may be difficult to define the minimum number of iteration to perform to reach the optimal value. 
+% However, the warping use cannot affect negatively the optimization performance. Indeed, if numerous iterations are performed, the warping use will probably be unnecessary. 
+% Conversely, if the number of iterations is limited, the warping can allow obtaining better results.
 
 \section*{References}
 \bibliographystyle{spbasic}
