@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -55,6 +55,12 @@ Grechi I, Ould-Sidi MM, Hilgert N, Senoussi R, Sauphanor B, Lescourret F (2012)
   Designing integrated management scenarios using simulation-based and
   multi-objective optimization: Application to the peach tree--myzus persicae
   aphid system. Ecological Modelling 246:47--59
+
+\bibitem[{Hansen et~al(2010)Hansen, Auger, Ros, Finck, and P}]{hansen2010}
+Hansen N, Auger A, Ros R, Finck S, P P (2010) Comparing results of 31
+  algorithms from the black-box optimization benchmarking bbob-2009.
+  Proceedings of the 12th annual conference companion on Genetic and
+  evolutionary computation pp 1689--1696
 
 \bibitem[{J.~Forrester et~al(2006)J.~Forrester, Keane, and
   Bressloff}]{forrester2006design}
