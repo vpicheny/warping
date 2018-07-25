@@ -660,7 +660,11 @@ A possible solution is $\theta_A = \mathbf{A}^T \boldsymbol{\theta}_I$.
 \subsubsection{Experiments description}
 
 To evaluate the benefits of including the warping step in the optimization process (i.e. reducing the parameter space removing the combinations which lead to the same management), 
-we conducted 50 independent optimizations of sharka management parameters with and without the warping step. \coralie{mettre ici quel type de warping on a utilise} The criterion to optimize was the mean of the NPV ($\overline{NPV}$).
+we conducted 50 independent optimizations of sharka management parameters with and without the warping step. 
+Warping is applied to seven variables, following Table \ref{tab:table_invariances_parameters}, to account for two simple invariances $\eta_s, \eta_f$, two combined ones $\chi_o, \eta_{f*}$, and three implying ``circular'' conditions:
+$\zeta_{eO}, \zeta_{f}$ and $\zeta_{s}$. On all cases, we used a Matern 5/2 correlation-based warping. 
+
+The criterion to optimize was the mean of the NPV ($\overline{NPV}$).
 For this to happen, we randomly selected 50 times 200 management strategies using a maximin Latin hypercube sampling design \cite{fang2005design}. 
 Then, for each sampling design of 200 strategies, we performed 2 optimizations in parallel: with and without the warping step. 
 For one optimization, we performed sequentially 200 iterations allowing to choose 200 new strategies, resulting in a total of 400 evaluated strategies.
