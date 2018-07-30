@@ -32,8 +32,8 @@ Cunniffe NJ, Koskella B, Metcalf CJE, Parnell S, Gottwald TR, Gilligan CA
   Gilligan}]{cunniffe2016modeling}
 Cunniffe NJ, Cobb RC, Meentemeyer RK, Rizzo DM, Gilligan CA (2016) Modeling
   when, where, and how to manage a forest epidemic, motivated by sudden oak
-  death in california. Proceedings of the National Academy of Sciences
-  113(20):5640--5645
+  death in california. Proceedings of the National Academy of Sciences of the
+  United States of America 113(20):5640--5645
 
 \bibitem[{Duvenaud(2014)}]{duvenaud2014automatic}
 Duvenaud D (2014) Automatic model construction with gaussian processes. PhD
@@ -75,7 +75,7 @@ Jalali H, Van~Nieuwenhuyse I, Picheny V (2017) Comparison of kriging-based
 
 \bibitem[{Jones et~al(1998)Jones, Schonlau, and Welch}]{jones1998efficient}
 Jones DR, Schonlau M, Welch WJ (1998) Efficient global optimization of
-  expensive black-box functions. Journal of Global optimization 13(4):455--492
+  expensive black-box functions. Journal of Global Optimization 13(4):455--492
 
 \bibitem[{Kompas et~al(2017)Kompas, Ha, Nguyen, East, Roche, and
   Garner}]{kompas2017optimal}
@@ -91,7 +91,7 @@ Marmin S, Ginsbourger D, Baccou J, Liandrat J (2018) Warped gaussian processes
   variations. SIAM/ASA Journal on Uncertainty Quantification 6(3):991--1018
 
 \bibitem[{Matheron(1963)}]{matheron1963principles}
-Matheron G (1963) Principles of geostatistics. Economic geology
+Matheron G (1963) Principles of geostatistics. Economic Geology
   58(8):1246--1266
 
 \bibitem[{Mockus(2012)}]{mockus2012bayesian}
@@ -101,17 +101,18 @@ Mockus J (2012) Bayesian approach to global optimization: theory and
 \bibitem[{Mushayabasa and Tapedzesa(2015)}]{mushayabasa2015modeling}
 Mushayabasa S, Tapedzesa G (2015) Modeling the effects of multiple intervention
   strategies on controlling foot-and-mouth disease. BioMed research
-  international 2015
+  international
 
-\bibitem[{Picard et~al(2018)Picard, Samuel, Jacquot, and Thébaud}]{picard2018}
-Picard C, Samuel S, Jacquot E, Thébaud G (2018) Analyzing the influence of
-  landscape aggregation on disease spread to improve management strategies. (in
-  prep)
+\bibitem[{Picard et~al(2018)Picard, Soubeyrand, Jacquot, and
+  Th\'ebaud}]{picard2018}
+Picard C, Soubeyrand S, Jacquot E, Th\'ebaud G (2018) Analyzing the influence
+  of landscape aggregation on disease spread to improve management strategies.
+  (under review)
 
 \bibitem[{Picheny and Ginsbourger(2014)}]{picheny2014noisy}
 Picheny V, Ginsbourger D (2014) Noisy kriging-based optimization methods: a
-  unified implementation within the diceoptim package. Computational Statistics
-  \& Data Analysis 71:1035--1053
+  unified implementation within the {D}ice{O}ptim package. Computational
+  Statistics \& Data Analysis 71:1035--1053
 
 \bibitem[{Picheny et~al(2013)Picheny, Wagner, and
   Ginsbourger}]{picheny2013benchmark}
@@ -121,9 +122,9 @@ Picheny V, Wagner T, Ginsbourger D (2013) A benchmark of kriging-based infill
 
 \bibitem[{Pleydell et~al(2018)Pleydell, Soubeyrand, Dallot, Labonne,
   Chad{\oe}uf, Jacquot, and Th{\'e}baud}]{pleydell2018estimation}
-Pleydell DR, Soubeyrand S, Dallot S, Labonne G, Chad{\oe}uf J, Jacquot E,
+Pleydell DRJ, Soubeyrand S, Dallot S, Labonne G, Chad{\oe}uf J, Jacquot E,
   Th{\'e}baud G (2018) Estimation of the dispersal distances of an aphid-borne
-  virus in a patchy landscape. PLoS computational biology 14(4):e1006,085
+  virus in a patchy landscape. PLoS Computational Biology 14(4):e1006085
 
 \bibitem[{{R Core Team}(2018)}]{R2018}
 {R Core Team} (2018) R: A Language and Environment for Statistical Computing. R
@@ -139,20 +140,20 @@ Rasmussen CE, Williams C (2006) {Gaussian Processes for Machine Learning}. MIT
 Rimbaud L, Dallot S, Gottwald T, Decroocq V, Jacquot E, Soubeyrand S,
   Th{\'e}baud G (2015) Sharka epidemiology and worldwide management strategies:
   learning lessons to optimize disease control in perennial plants. Annual
-  review of phytopathology 53:357--378
+  Review of Phytopathology 53:357--378
 
 \bibitem[{Rimbaud et~al(2018{\natexlab{a}})Rimbaud, Bruchou, Dallot, Pleydell,
   Jacquot, Soubeyrand, and Th{\'e}baud}]{rimbaud2018using}
-Rimbaud L, Bruchou C, Dallot S, Pleydell DR, Jacquot E, Soubeyrand S,
+Rimbaud L, Bruchou C, Dallot S, Pleydell DRJ, Jacquot E, Soubeyrand S,
   Th{\'e}baud G (2018{\natexlab{a}}) Using sensitivity analysis to identify key
-  factors for the propagation of a plant epidemic. Royal Society open science
-  5(1):171,435
+  factors for the propagation of a plant epidemic. Royal Society Open Science
+  5(1):171435
 
 \bibitem[{Rimbaud et~al(2018{\natexlab{b}})Rimbaud, Dallot, Bruchou, Thoyer,
   Jacquot, Soubeyrand, and Th{\'e}baud}]{rimbaud2018heuristic}
 Rimbaud L, Dallot S, Bruchou C, Thoyer S, Jacquot E, Soubeyrand S, Th{\'e}baud
   G (2018{\natexlab{b}}) Heuristic optimisation of the management strategy of a
-  plant epidemic using sequential sensitivity analyses. bioRxiv p 315747
+  plant epidemic using sequential sensitivity analyses. BioRxiv 315747
 
 \bibitem[{Rios and Sahinidis(2013)}]{rios2013derivative}
 Rios LM, Sahinidis NV (2013) Derivative-free optimization: a review of
@@ -186,12 +187,12 @@ Snoek J, Swersky K, Zemel R, Adams R (2014) Input warping for bayesian
   Woolhouse, Grenfell, and Keeling}]{tildesley2006optimal}
 Tildesley MJ, Savill NJ, Shaw DJ, Deardon R, Brooks SP, Woolhouse ME, Grenfell
   BT, Keeling MJ (2006) Optimal reactive vaccination strategies for a
-  foot-and-mouth outbreak in the uk. Nature 440(7080):83
+  foot-and-mouth outbreak in the {U}{K}. Nature 440(7080):83
 
 \bibitem[{VanderWaal et~al(2017)VanderWaal, Enns, Picasso, Alvarez, Perez,
   Fernandez, Gil, Craft, and Wells}]{vanderwaal2017optimal}
 VanderWaal K, Enns EA, Picasso C, Alvarez J, Perez A, Fernandez F, Gil A, Craft
   M, Wells S (2017) Optimal surveillance strategies for bovine tuberculosis in
-  a low-prevalence country. Scientific reports 7(1):4140
+  a low-prevalence country. Scientific Reports 7(1):4140
 
 \end{thebibliography}
