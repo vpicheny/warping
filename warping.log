@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.12)  10 AUG 2018 11:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.12)  10 AUG 2018 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,9 +392,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 208.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 209.
 
-Overfull \hbox (25.39595pt too wide) in paragraph at lines 209--234
+Overfull \hbox (25.39595pt too wide) in paragraph at lines 210--235
  [][][] 
  []
 
@@ -403,23 +403,28 @@ Overfull \hbox (25.39595pt too wide) in paragraph at lines 209--234
 File: Figures_Warping_paras_de_gestion.pdf Graphic file (type pdf)
 <use Figures_Warping_paras_de_gestion.pdf>
 Package pdftex.def Info: Figures_Warping_paras_de_gestion.pdf  used on input li
-ne 238. on input line 238.
+ne 239. on input line 239.
 Package pdftex.def Info: Requested size: 338.0pt x 236.20047pt on input line 23
-8.
+9.
 
 Underfull \vbox (badness 5008) has occurred while \output is active []
 
  [3]
 [4 <./Figures_Warping_paras_de_gestion.pdf>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
 
  []
 
-[6]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
 
-Overfull \hbox (4.9855pt too wide) in paragraph at lines 417--420
+Overfull \hbox (2.00362pt too wide) in paragraph at lines 333--344
+\OT1/ptm/m/n/10 orig-i-nal one. First, the (noisy) krig-ing pre-dic-tions at th
+e DOE points $\OML/cmm/m/it/10 ^^V\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x[]\OT1/cmr
+/m/n/10 )\OML/cmm/m/it/10 ; [] ; ^^V\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x[]\OT1/c
+mr/m/n/10 )$
+ []
+
+[6]
+Overfull \hbox (4.9855pt too wide) in paragraph at lines 421--424
 \OT1/ptm/m/n/10 to han-dle this prob-lem is to dis-tort lo-cally the space so t
 hat the sub-space $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OT
 1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x[] \OT1/c
@@ -430,87 +435,88 @@ mr/m/n/10 =
 <def2Dsimple.pdf, id=105, pagebox=cropbox, 578.16pt x 578.16pt>
 File: def2Dsimple.pdf Graphic file (type pdf)
 <use def2Dsimple.pdf>
-Package pdftex.def Info: def2Dsimple.pdf  used on input line 478. on input line
- 478.
+Package pdftex.def Info: def2Dsimple.pdf  used on input line 479. on input line
+ 479.
 Package pdftex.def Info: Requested size: 270.40103pt x 270.39429pt on input lin
-e 478.
-<simu2Dsimple.pdf, id=106, pagebox=cropbox, 578.16pt x 433.62pt>
-File: simu2Dsimple.pdf Graphic file (type pdf)
-<use simu2Dsimple.pdf>
-Package pdftex.def Info: simu2Dsimple.pdf  used on input line 486. on input lin
-e 486.
-Package pdftex.def Info: Requested size: 338.0pt x 105.88318pt on input line 48
-6.
- [8] [9 <./simu2Dsimple.pdf> <./def2Dsimple.pdf>]
-<def2DOR.pdf, id=128, pagebox=cropbox, 578.16pt x 578.16pt>
+e 479.
+ [8] [9 <./def2Dsimple.pdf>]
+<def2DOR.pdf, id=120, pagebox=cropbox, 578.16pt x 578.16pt>
 File: def2DOR.pdf Graphic file (type pdf)
 <use def2DOR.pdf>
-Package pdftex.def Info: def2DOR.pdf  used on input line 590. on input line 590
+Package pdftex.def Info: def2DOR.pdf  used on input line 584. on input line 584
 .
 Package pdftex.def Info: Requested size: 270.40103pt x 270.39429pt on input lin
-e 590.
+e 584.
  [10]
-<defAND.pdf, id=132, pagebox=cropbox, 256.96pt x 256.96pt>
+<defAND.pdf, id=124, pagebox=cropbox, 256.96pt x 256.96pt>
 File: defAND.pdf Graphic file (type pdf)
 <use defAND.pdf>
-Package pdftex.def Info: defAND.pdf  used on input line 618. on input line 618.
+Package pdftex.def Info: defAND.pdf  used on input line 612. on input line 612.
 
 Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
- 618.
-<def3DOR2s.pdf, id=134, pagebox=cropbox, 256.96pt x 256.96pt>
+ 612.
+<def3DOR2s.pdf, id=126, pagebox=cropbox, 256.96pt x 256.96pt>
 File: def3DOR2s.pdf Graphic file (type pdf)
 <use def3DOR2s.pdf>
-Package pdftex.def Info: def3DOR2s.pdf  used on input line 619. on input line 6
-19.
+Package pdftex.def Info: def3DOR2s.pdf  used on input line 613. on input line 6
+13.
 Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
- 619.
-<def3Dlin.pdf, id=136, pagebox=cropbox, 256.96pt x 256.96pt>
+ 613.
+<def3Dlin.pdf, id=128, pagebox=cropbox, 256.96pt x 256.96pt>
 File: def3Dlin.pdf Graphic file (type pdf)
 <use def3Dlin.pdf>
-Package pdftex.def Info: def3Dlin.pdf  used on input line 620. on input line 62
-0.
+Package pdftex.def Info: def3Dlin.pdf  used on input line 614. on input line 61
+4.
 Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
- 620.
-<def3Dcirc2.pdf, id=138, pagebox=cropbox, 256.96pt x 256.96pt>
+ 614.
+<def3Dcirc2.pdf, id=130, pagebox=cropbox, 256.96pt x 256.96pt>
 File: def3Dcirc2.pdf Graphic file (type pdf)
 <use def3Dcirc2.pdf>
-Package pdftex.def Info: def3Dcirc2.pdf  used on input line 621. on input line 
-621.
+Package pdftex.def Info: def3Dcirc2.pdf  used on input line 615. on input line 
+615.
 Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
- 621.
-<def3Dedge.pdf, id=140, pagebox=cropbox, 256.96pt x 256.96pt>
+ 615.
+<def3Dedge.pdf, id=132, pagebox=cropbox, 256.96pt x 256.96pt>
 File: def3Dedge.pdf Graphic file (type pdf)
 <use def3Dedge.pdf>
-Package pdftex.def Info: def3Dedge.pdf  used on input line 622. on input line 6
-22.
+Package pdftex.def Info: def3Dedge.pdf  used on input line 616. on input line 6
+16.
 Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
- 622.
-
+ 616.
+ [11 <./def2DOR.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11 <./def2DOR.pdf>] [12 <./defAND.pdf> <./def3DOR2s.pdf> <./def3Dlin.pdf> <./
-def3Dcirc2.pdf> <./def3Dedge.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 700.
+ [12 <./defAND.pdf> <./def3DOR2s.pdf> <./def3Dlin.pdf> <./def3Dcirc2.pdf> <./de
+f3Dedge.pdf>]
+<simu2Dsimple.pdf, id=268, pagebox=cropbox, 578.16pt x 433.62pt>
+File: simu2Dsimple.pdf Graphic file (type pdf)
+<use simu2Dsimple.pdf>
+Package pdftex.def Info: simu2Dsimple.pdf  used on input line 691. on input lin
+e 691.
+Package pdftex.def Info: Requested size: 338.0pt x 105.88318pt on input line 69
+1.
+ [13 <./simu2Dsimple.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 717.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [13]
-<Figure_Warping_density.pdf, id=281, pagebox=cropbox, 542.025pt x 782.925pt>
+)
+<Figure_Warping_density.pdf, id=282, pagebox=cropbox, 542.025pt x 782.925pt>
 File: Figure_Warping_density.pdf Graphic file (type pdf)
 <use Figure_Warping_density.pdf>
-Package pdftex.def Info: Figure_Warping_density.pdf  used on input line 709. on
- input line 709.
-Package pdftex.def Info: Requested size: 338.0pt x 177.79228pt on input line 70
-9.
+Package pdftex.def Info: Figure_Warping_density.pdf  used on input line 726. on
+ input line 726.
+Package pdftex.def Info: Requested size: 338.0pt x 177.79228pt on input line 72
+6.
 
-Overfull \hbox (22.02681pt too wide) in paragraph at lines 713--715
+Overfull \hbox (22.02681pt too wide) in paragraph at lines 730--732
 \OT1/ptm/m/n/10 (with-out warp-ing) lines is al-ready 3957euro/ha. In ad-di-tio
 n, to reach $[]$=16,400euro/ha,
  []
 
 
-Overfull \hbox (15.95543pt too wide) in paragraph at lines 721--726
+Overfull \hbox (15.95543pt too wide) in paragraph at lines 738--743
 \OT1/ptm/m/n/10 ceed $\OML/cmm/m/it/10 []$\OT1/ptm/m/n/10 . We used $\OML/cmm/
 m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [0;18,012.12] Sup-ple-men-tary 
 (Fig.1[]) and $\OML/cmm/m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [10,000
@@ -518,84 +524,87 @@ m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [0;18,012.12] Sup-ple-men-tary
  []
 
 <Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf, i
-d=283, pagebox=cropbox, 542.025pt x 782.925pt>
+d=284, pagebox=cropbox, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.p
 df Graphic file (type pdf)
 <use Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pd
 f>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_moyennes_mean_NPV_wa
-rping_sanswarping.pdf  used on input line 731. on input line 731.
-Package pdftex.def Info: Requested size: 338.0pt x 191.75992pt on input line 73
-1.
-[14 <./Figure_Warping_density.pdf>]
-<Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=312, pagebox=cr
+rping_sanswarping.pdf  used on input line 748. on input line 748.
+Package pdftex.def Info: Requested size: 338.0pt x 191.75992pt on input line 74
+8.
+[14]
+<Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=290, pagebox=cr
 opbox, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf Graphic file (
 type pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_10000_18000
-.pdf  used on input line 745. on input line 745.
-Package pdftex.def Info: Requested size: 338.0pt x 195.78606pt on input line 74
-5.
- [15 <./Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping
-.pdf> <./Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
+.pdf  used on input line 762. on input line 762.
+Package pdftex.def Info: Requested size: 338.0pt x 195.78606pt on input line 76
+2.
 
-Overfull \hbox (6.54619pt too wide) in paragraph at lines 772--776
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./Figure_Warping_density.pdf> <./Figures_Warping_resultats_courbes_moyenn
+es_mean_NPV_warping_sanswarping.pdf>]
+Overfull \hbox (6.54619pt too wide) in paragraph at lines 788--792
 []\OT1/ptm/m/n/10 We ap-plied this Bayesian op-ti-miza-tion pro-cess to the spa
 tio-temporal sharka model.
  []
 
-(./warping.bbl [16]
+[16 <./Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>]
+(./warping.bbl [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
-<Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=362, pagebox=cropbo
+ [18])
+<Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=367, pagebox=cropbo
 x, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf Graphic file (type
  pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf
-  used on input line 809. on input line 809.
-Package pdftex.def Info: Requested size: 338.0pt x 195.09474pt on input line 80
-9.
+  used on input line 825. on input line 825.
+Package pdftex.def Info: Requested size: 338.0pt x 195.09474pt on input line 82
+5.
 
-[18] [19 <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>]
-(./warping.aux) ) 
+[19 <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>] (./warping.aux)
+ ) 
 Here is how much of TeX's memory you used:
- 4641 strings out of 492990
- 65412 string characters out of 6135005
- 140988 words of memory out of 5000000
- 8063 multiletter control sequences out of 15000+600000
+ 4640 strings out of 492990
+ 65388 string characters out of 6135005
+ 140996 words of memory out of 5000000
+ 8062 multiletter control sequences out of 15000+600000
  28746 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,35p,655b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on warping.pdf (19 pages, 5400945 bytes).
+ 41i,14n,35p,655b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/times/utmri8a.pfb>
+Output written on warping.pdf (19 pages, 5410959 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 336 compressed objects within 4 object streams
+ 465 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
