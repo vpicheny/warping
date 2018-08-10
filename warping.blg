@@ -1,3 +1,47 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: warping.aux
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: warping.aux
 The style file: spbasic.bst
 Database file #1: refs.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 34 entries,
+            3270 wiz_defined-function locations,
+            882 strings with 12472 characters,
+and the built_in function-call counts, 54209 in all, are:
+= -- 5984
+> -- 1288
+< -- 14
++ -- 586
+- -- 408
+* -- 4126
+:= -- 6209
+add.period$ -- 34
+call.type$ -- 34
+change.case$ -- 307
+chr.to.int$ -- 33
+cite$ -- 34
+duplicate$ -- 5468
+empty$ -- 4156
+format.name$ -- 512
+if$ -- 11322
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 384
+newline$ -- 112
+num.names$ -- 136
+pop$ -- 1439
+preamble$ -- 1
+purify$ -- 272
+quote$ -- 0
+skip$ -- 1949
+stack$ -- 0
+substring$ -- 5703
+swap$ -- 2681
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 294
+warning$ -- 0
+while$ -- 334
+width$ -- 0
+write$ -- 381

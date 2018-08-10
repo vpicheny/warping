@@ -1,22 +1,23 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.24)  30 JUL 2018 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.12)  10 AUG 2018 11:42
 entering extended mode
-**./warping.tex
-(warping.tex
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**warping.tex
+(./warping.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\base\fix-cm.sty"
+Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\base\ts1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-))
-(svjour3.cls
+)) (./svjour3.cls
 Document Class: svjour3 2007/05/08 v3.2 
 LaTeX document class for Springer journals
 Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
 (Springer-SVJour3)           not found in option list of \documentclass
 (Springer-SVJour3)           - autoactivating "global" style.
-(svglov3.clo
+(./svglov3.clo
 File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
 
 SVJour Class option: svglov3.clo for standardised journals
@@ -77,10 +78,8 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
 \figgap=\dimen112
 \bibindent=\dimen113
 \@tempcntc=\count104
-)
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\booktabs\booktabs.sty
-"
-Package: booktabs 2005/04/14 v1.61803 publication quality tables
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen114
 \lightrulewidth=\dimen115
 \cmidrulewidth=\dimen116
@@ -99,50 +98,47 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count108
 \@thisrulewidth=\dimen126
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\graphicx.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\keyval.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\graphics.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\trig.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics-cfg\graphics
-.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics-def\pdftex.d
-ef"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\psnfss\times.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\base\latexsym.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\jknappen\mathrsfs.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup5
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsfonts\amssymb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsfonts\amsfonts.sty
-"
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks17
 \symAMSa=\mathgroup6
@@ -150,23 +146,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2017/09/02 v2.17a AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsmath\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen129
-)) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsmath\amsbsy.sty
-"
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen130
-) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsmath\amsopn.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count109
@@ -184,6 +181,7 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen131
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+
 
 Package amsmath Warning: Unable to redefine math accent \vec.
 
@@ -209,36 +207,36 @@ Package amsmath Warning: Unable to redefine math accent \vec.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\natbib\natbib.sty"
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count121
-) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\color.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics-cfg\color.cf
-g"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\bbm\bbm.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\url\url.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\xcolor\xcolor.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics-cfg\color.cf
-g"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -253,12 +251,13 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\graphics\dvipsnam.def
-"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\xcolor\svgnam.def"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
 File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
-)) ("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\ulem\ulem.sty"
+))
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box31
 \UL@hyphenbox=\box32
 \UL@skip=\skip48
@@ -269,8 +268,8 @@ File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 \ULC@box=\box33
 Package: ulem 2012/05/18
 \ULdepth=\dimen140
-)
-(collab_tex.sty) (warping.aux)
+) (./collab_tex.sty)
+(./warping.aux)
 \openout1 = `warping.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
@@ -288,13 +287,12 @@ LaTeX Font Info:    ... okay on input line 87.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
 LaTeX Font Info:    ... okay on input line 87.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 87.
-
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\psnfss\ot1ptm.fd"
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\context\base\supp-pdf.mkii"
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen141
@@ -307,40 +305,31 @@ Unknown journal: specify \journalname{<name of your journal>} in preambel
 \MPnumerator=\count127
 \makeMPintoPDFobject=\count128
 \everyMPtoPDFconversion=\toks25
-)
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\oberdiek\epstopdf-bas
-e.sty"
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\infwarerr.
-sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\oberdiek\grfext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\kvdefineke
-ys.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\ltxcmds.st
-y"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\oberdiek\kvoptions.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\kvsetkeys.
-sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\etexcmds.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\ifluatex.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -349,12 +338,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\pdftexcmds
-.sty"
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\generic\oberdiek\ifpdf.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -368,7 +356,11 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 SVJour3 warning: Missing \journalname
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 118.
@@ -379,141 +371,146 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 118.
 LaTeX Font Info:    Try loading font information for U+rsfs on input line 118.
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\jknappen\ursfs.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 118.
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsfonts\umsa.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\amsfonts\umsb.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 SVJour3 Warning: Title too long for running head.
 Please supply a shorter form with \titlerunning prior to \maketitle
-[1{C:/Users/rimbaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
-
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 208.
 
-Overfull \hbox (25.39595pt too wide) in paragraph at lines 205--230
+Overfull \hbox (25.39595pt too wide) in paragraph at lines 209--234
  [][][] 
  []
 
-<Figures_Warping_paras_de_gestion.pdf, id=16, 542.025pt x 782.925pt>
+<Figures_Warping_paras_de_gestion.pdf, id=17, pagebox=cropbox, 542.025pt x 782.
+925pt>
 File: Figures_Warping_paras_de_gestion.pdf Graphic file (type pdf)
 <use Figures_Warping_paras_de_gestion.pdf>
 Package pdftex.def Info: Figures_Warping_paras_de_gestion.pdf  used on input li
-ne 234.
-(pdftex.def)             Requested size: 338.0pt x 236.20047pt.
+ne 238. on input line 238.
+Package pdftex.def Info: Requested size: 338.0pt x 236.20047pt on input line 23
+8.
 
 Underfull \vbox (badness 5008) has occurred while \output is active []
 
  [3]
-[4 <./Figures_Warping_paras_de_gestion.pdf>]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+[4 <./Figures_Warping_paras_de_gestion.pdf>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
 
  []
 
 [6]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
- [7]
-Overfull \hbox (4.9855pt too wide) in paragraph at lines 405--408
+
+Overfull \hbox (4.9855pt too wide) in paragraph at lines 417--420
 \OT1/ptm/m/n/10 to han-dle this prob-lem is to dis-tort lo-cally the space so t
 hat the sub-space $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OT
 1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x[] \OT1/c
 mr/m/n/10 =
  []
 
-[8]
-<def2Dsimple.pdf, id=107, 578.16pt x 433.62pt>
+[7]
+<def2Dsimple.pdf, id=105, pagebox=cropbox, 578.16pt x 578.16pt>
 File: def2Dsimple.pdf Graphic file (type pdf)
 <use def2Dsimple.pdf>
-Package pdftex.def Info: def2Dsimple.pdf  used on input line 466.
-(pdftex.def)             Requested size: 270.40103pt x 202.79572pt.
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no § in font ptmr7t!
-<simu2Dsimple.pdf, id=108, 578.16pt x 433.62pt>
+Package pdftex.def Info: def2Dsimple.pdf  used on input line 478. on input line
+ 478.
+Package pdftex.def Info: Requested size: 270.40103pt x 270.39429pt on input lin
+e 478.
+<simu2Dsimple.pdf, id=106, pagebox=cropbox, 578.16pt x 433.62pt>
 File: simu2Dsimple.pdf Graphic file (type pdf)
 <use simu2Dsimple.pdf>
-Package pdftex.def Info: simu2Dsimple.pdf  used on input line 473.
-(pdftex.def)             Requested size: 338.0pt x 105.88318pt.
- [9 <./def2Dsimple.pdf>]
-<def3Dedge.pdf, id=121, 256.96pt x 256.96pt>
-File: def3Dedge.pdf Graphic file (type pdf)
-<use def3Dedge.pdf>
-Package pdftex.def Info: def3Dedge.pdf  used on input line 524.
-(pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
-<defAND.pdf, id=122, 256.96pt x 256.96pt>
-File: defAND.pdf Graphic file (type pdf)
-<use defAND.pdf>
-Package pdftex.def Info: defAND.pdf  used on input line 525.
-(pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
-<def3Daff.pdf, id=123, 256.96pt x 256.96pt>
-File: def3Daff.pdf Graphic file (type pdf)
-<use def3Daff.pdf>
-Package pdftex.def Info: def3Daff.pdf  used on input line 526.
-(pdftex.def)             Requested size: 101.40103pt x 101.40202pt.
- [10 <./simu2Dsimple.pdf> <./def3Dedge.pdf> <./defAND.pdf> <./def3Daff.pdf>]
-<def3DORs.pdf, id=201, 256.96pt x 256.96pt>
-File: def3DORs.pdf Graphic file (type pdf)
-<use def3DORs.pdf>
-Package pdftex.def Info: def3DORs.pdf  used on input line 563.
-(pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
-<def3DOR2s.pdf, id=202, 256.96pt x 256.96pt>
-File: def3DOR2s.pdf Graphic file (type pdf)
-<use def3DOR2s.pdf>
-Package pdftex.def Info: def3DOR2s.pdf  used on input line 564.
-(pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
- [11 <./def3DORs.pdf> <./def3DOR2s.pdf>]
-<def2DOR.pdf, id=250, 578.16pt x 433.62pt>
+Package pdftex.def Info: simu2Dsimple.pdf  used on input line 486. on input lin
+e 486.
+Package pdftex.def Info: Requested size: 338.0pt x 105.88318pt on input line 48
+6.
+ [8] [9 <./simu2Dsimple.pdf> <./def2Dsimple.pdf>]
+<def2DOR.pdf, id=128, pagebox=cropbox, 578.16pt x 578.16pt>
 File: def2DOR.pdf Graphic file (type pdf)
 <use def2DOR.pdf>
-Package pdftex.def Info: def2DOR.pdf  used on input line 598.
-(pdftex.def)             Requested size: 270.40103pt x 202.79572pt.
-<def3Dcirc1.pdf, id=251, 256.96pt x 256.96pt>
-File: def3Dcirc1.pdf Graphic file (type pdf)
-<use def3Dcirc1.pdf>
-Package pdftex.def Info: def3Dcirc1.pdf  used on input line 626.
-(pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
-<def3Dcirc2.pdf, id=252, 256.96pt x 256.96pt>
+Package pdftex.def Info: def2DOR.pdf  used on input line 590. on input line 590
+.
+Package pdftex.def Info: Requested size: 270.40103pt x 270.39429pt on input lin
+e 590.
+ [10]
+<defAND.pdf, id=132, pagebox=cropbox, 256.96pt x 256.96pt>
+File: defAND.pdf Graphic file (type pdf)
+<use defAND.pdf>
+Package pdftex.def Info: defAND.pdf  used on input line 618. on input line 618.
+
+Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
+ 618.
+<def3DOR2s.pdf, id=134, pagebox=cropbox, 256.96pt x 256.96pt>
+File: def3DOR2s.pdf Graphic file (type pdf)
+<use def3DOR2s.pdf>
+Package pdftex.def Info: def3DOR2s.pdf  used on input line 619. on input line 6
+19.
+Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
+ 619.
+<def3Dlin.pdf, id=136, pagebox=cropbox, 256.96pt x 256.96pt>
+File: def3Dlin.pdf Graphic file (type pdf)
+<use def3Dlin.pdf>
+Package pdftex.def Info: def3Dlin.pdf  used on input line 620. on input line 62
+0.
+Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
+ 620.
+<def3Dcirc2.pdf, id=138, pagebox=cropbox, 256.96pt x 256.96pt>
 File: def3Dcirc2.pdf Graphic file (type pdf)
 <use def3Dcirc2.pdf>
-Package pdftex.def Info: def3Dcirc2.pdf  used on input line 627.
-(pdftex.def)             Requested size: 135.19794pt x 135.20007pt.
- [12 <./def2DOR.pdf>] [13 <./def3Dcirc1.pdf> <./def3Dcirc2.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 673.
+Package pdftex.def Info: def3Dcirc2.pdf  used on input line 621. on input line 
+621.
+Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
+ 621.
+<def3Dedge.pdf, id=140, pagebox=cropbox, 256.96pt x 256.96pt>
+File: def3Dedge.pdf Graphic file (type pdf)
+<use def3Dedge.pdf>
+Package pdftex.def Info: def3Dedge.pdf  used on input line 622. on input line 6
+22.
+Package pdftex.def Info: Requested size: 135.19794pt x 151.2675pt on input line
+ 622.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./def2DOR.pdf>] [12 <./defAND.pdf> <./def3DOR2s.pdf> <./def3Dlin.pdf> <./
+def3Dcirc2.pdf> <./def3Dedge.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 700.
 
 
-("D:\Mes donnees\Logiciels & informatique\Latex\tex\latex\psnfss\ot1pcr.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-<Figure_Warping_density.pdf, id=308, 542.025pt x 782.925pt>
+) [13]
+<Figure_Warping_density.pdf, id=281, pagebox=cropbox, 542.025pt x 782.925pt>
 File: Figure_Warping_density.pdf Graphic file (type pdf)
 <use Figure_Warping_density.pdf>
-Package pdftex.def Info: Figure_Warping_density.pdf  used on input line 682.
-(pdftex.def)             Requested size: 338.0pt x 177.79228pt.
+Package pdftex.def Info: Figure_Warping_density.pdf  used on input line 709. on
+ input line 709.
+Package pdftex.def Info: Requested size: 338.0pt x 177.79228pt on input line 70
+9.
 
-Overfull \hbox (22.02681pt too wide) in paragraph at lines 686--688
+Overfull \hbox (22.02681pt too wide) in paragraph at lines 713--715
 \OT1/ptm/m/n/10 (with-out warp-ing) lines is al-ready 3957euro/ha. In ad-di-tio
 n, to reach $[]$=16,400euro/ha,
  []
 
 
-Overfull \hbox (15.95543pt too wide) in paragraph at lines 694--699
+Overfull \hbox (15.95543pt too wide) in paragraph at lines 721--726
 \OT1/ptm/m/n/10 ceed $\OML/cmm/m/it/10 []$\OT1/ptm/m/n/10 . We used $\OML/cmm/
 m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [0;18,012.12] Sup-ple-men-tary 
 (Fig.1[]) and $\OML/cmm/m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [10,000
@@ -521,92 +518,84 @@ m/it/10 $ $\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 [0;18,012.12] Sup-ple-men-tary
  []
 
 <Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pdf, i
-d=310, 542.025pt x 782.925pt>
+d=283, pagebox=cropbox, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.p
 df Graphic file (type pdf)
 <use Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping.pd
 f>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_moyennes_mean_NPV_wa
-rping_sanswarping.pdf  used on input line 704.
-(pdftex.def)             Requested size: 338.0pt x 191.75992pt.
-[14]
-<Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=316, 542.025pt 
-x 782.925pt>
+rping_sanswarping.pdf  used on input line 731. on input line 731.
+Package pdftex.def Info: Requested size: 338.0pt x 191.75992pt on input line 73
+1.
+[14 <./Figure_Warping_density.pdf>]
+<Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf, id=312, pagebox=cr
+opbox, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf Graphic file (
 type pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_10000_18000
-.pdf  used on input line 718.
-(pdftex.def)             Requested size: 338.0pt x 195.78606pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15 <./Figure_Warping_density.pdf> <./Figures_Warping_resultats_courbes_moyenn
-es_mean_NPV_warping_sanswarping.pdf>]
+.pdf  used on input line 745. on input line 745.
+Package pdftex.def Info: Requested size: 338.0pt x 195.78606pt on input line 74
+5.
+ [15 <./Figures_Warping_resultats_courbes_moyennes_mean_NPV_warping_sanswarping
+.pdf> <./Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
 
-Overfull \hbox (6.54619pt too wide) in paragraph at lines 744--748
+Overfull \hbox (6.54619pt too wide) in paragraph at lines 772--776
 []\OT1/ptm/m/n/10 We ap-plied this Bayesian op-ti-miza-tion pro-cess to the spa
 tio-temporal sharka model.
  []
 
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
-
- [16 <./Figures_Warping_resultats_courbes_algoCoco_10000_18000.pdf>] (warping.b
-bl [17]
+(./warping.bbl [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18])
-<Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=392, 542.025pt x 78
-2.925pt>
+ [17])
+<Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf, id=362, pagebox=cropbo
+x, 542.025pt x 782.925pt>
 File: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf Graphic file (type
  pdf)
 <use Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>
 Package pdftex.def Info: Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf
-  used on input line 781.
-(pdftex.def)             Requested size: 338.0pt x 195.09474pt.
+  used on input line 809. on input line 809.
+Package pdftex.def Info: Requested size: 338.0pt x 195.09474pt on input line 80
+9.
 
-[19 <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>] (warping.aux) )
- 
+[18] [19 <./Figures_Warping_resultats_courbes_algoCoco_0_18000.pdf>]
+(./warping.aux) ) 
 Here is how much of TeX's memory you used:
- 4653 strings out of 493305
- 67391 string characters out of 3131092
- 141133 words of memory out of 3000000
- 8068 multiletter control sequences out of 15000+200000
- 28746 words of font info for 78 fonts, out of 3000000 for 9000
+ 4641 strings out of 492990
+ 65412 string characters out of 6135005
+ 140988 words of memory out of 5000000
+ 8063 multiletter control sequences out of 15000+600000
+ 28746 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,37p,692b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Mes donnees/Logiciels & informatique/Latex/fonts/enc/dvips/base/8r.enc}<D:/
-Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmbsy
-10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><D:/Mes donnees/Logiciels & informatique/L
-atex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Mes donnees/Logiciels & infor
-matique/Latex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Mes donnees/Logiciel
-s & informatique/Latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Mes donnees
-/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/
-Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts
-/cm/cmr5.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/public/
-amsfonts/cm/cmr6.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><D:/Mes donnees/Logiciels & informatique/L
-atex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Mes donnees/Logiciels & info
-rmatique/Latex/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Mes donnees/Logicie
-ls & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Mes donnee
-s/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/M
-es donnees/Logiciels & informatique/Latex/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/courie
-r/ucrr8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/tim
-es/utmb8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/ti
-mes/utmr8a.pfb><D:/Mes donnees/Logiciels & informatique/Latex/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on warping.pdf (19 pages, 7084196 bytes).
+ 41i,14n,35p,655b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on warping.pdf (19 pages, 5400945 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
+ 457 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

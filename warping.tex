@@ -159,7 +159,11 @@ In some cases, the user possesses relevant information regarding his model that 
 Accounting for this information within a black-box optimization framework (or rather: \textit{grey box}) may be a challenging task
 as it is, in essence, unnatural. In this work, we focus on a particular type of information, which we refer to as \textit{local invariance}:
 for some values of a subset of parameters, it is known that the model is insensitive to another subset of parameters. 
-As an illustration, take a function $y$ that depends on two discs, parameterized by $r_1 \in [0, r_{\max}]$ (radius of the first disc) and $r_2 \in [0, r_{\max}]$ (radius of the second disc) with $r_1 > r_2$. An action $A_1$ is conveyed on the first disc and another action $A_2$ on the second. Setting $r_1=0$, we have $r_2=0$, thus for any value of $A_2$, $y$ is not impacted. Such invariances can slow down the optimization process and even prevent the optimization from converging at the optimum. \gaeladd{Ca vaudrait le coup d'expliciter un peu mieux l'importance de prendre en compte les invariances} \coralieadd{J'ai modifié un peu ce paragraphe}
+As an illustration, take a function $y$ that depends on two discs, parameterized by $r_1 \in [0, r_{\max}]$ (radius of the first disc) and $r_2 \in [0, r_{\max}]$ (radius of the second disc) with $r_1 > r_2$. 
+An action $A_1$ is conveyed on the first disc and another action $A_2$ on the second. Setting $r_1=0$, we have $r_2=0$, thus for any value of $A_2$, $y$ is not impacted. 
+Taking into account such invariances would avoid wasting computational resources exploring those regions. 
+Moreover, it would avoid the problem of having local \textit{plateaus} of the optimization landscape, 
+that are likely to slow down the optimization process or even prevent convergence to an optimum.
 
 Intuitively, one may want to rework the definition of the parameters to optimize over in order
 to remove the invariances. However (as we show in \ref{sec:model}), such a reformulation is not always possible.
@@ -267,7 +271,8 @@ The parameter invariances removed from the model are listed in Table \ref{tab:ta
 
 \subsection{Overview}
 Bayesian optimization can be seen as a modernization of the statistical response surface
-methodology for sequential design~\cite{box1987empirical}, where the basic idea is to replace an expensive \gaeladd{Preciser ici que c'est l'evaluation qui est couteuse (costly, je pense).} function by a cheap-to-evaluate surrogate one.
+methodology for sequential design~\cite{box1987empirical}, where the basic idea is to replace an expensive-to-evaluate 
+function by a cheap-to-evaluate surrogate one.
 In BO, Gaussian process (GP) regression, or kriging, is used to provide flexible response surface fits.
 GPs are attractive in particular for their tractability, 
 since they are simply characterized by their mean $m(.)$ and covariance (or kernel) $k(.,.)$ functions, see e.g., \citet{Rasmussen2006}. 
@@ -280,9 +285,9 @@ the predictive distribution of $y$ is another GP, with mean and covariance funct
 \mu(\x) & =& \textbf{k}(\x)^\top \textbf{K}^{-1} \f,  \\
 \sigma^2(\x, \x') & =& k(\x, \x') - \textbf{k}(\x)^\top \textbf{K}^{-1} \textbf{k}(\x'),
 \end{eqnarray}
-\gaeladd{J'ai un doute sur l'equation 1. k(x) etant defini comme la transpose du vecteur des k(x,xi), on transpose la transposee (pour rien, en qq sorte). N'est-il pas plus simple de définir k(x) comme un vecteur non transpose ? Idem pour l'equation 2. }\\
-\gaeladd{Dans l'equation 2, je note que k(x') n'est pas transpose, donc si on redefinit k(x), il faudrait avoir "k(x') puissance T".}\\
-where $\textbf{k}(\x) := (k(\x, \x_1), \dots, k(\x, \x_n))^\top$ and $\textbf{K} := (k(\x_i, \x_j) + \tau_i^2 \delta_{i=j})_{1 \leq i,j \leq n}$,
+% \gaeladd{J'ai un doute sur l'equation 1. k(x) etant defini comme la transpose du vecteur des k(x,xi), on transpose la transposee (pour rien, en qq sorte). N'est-il pas plus simple de définir k(x) comme un vecteur non transpose ? Idem pour l'equation 2. }\\
+% \gaeladd{Dans l'equation 2, je note que k(x') n'est pas transpose, donc si on redefinit k(x), il faudrait avoir "k(x') puissance T".}\\
+where $T$ denotes the tranposition operator, $\textbf{k}(\x) := (k(\x, \x_1), \dots, k(\x, \x_n))^\top$ and $\textbf{K} := (k(\x_i, \x_j) + \tau_i^2 \delta_{i=j})_{1 \leq i,j \leq n}$,
 $\delta$ standing for the Kronecker function.
 
 Commonly, $k(.,.)$ belongs to a parametric family of covariance functions such as the Gaussian and Mat\'ern kernels, 
@@ -325,14 +330,21 @@ built from the original one. First, the (noisy) kriging predictions at the DOE p
 Then, a reinterpolating model is built, by using the same covariance kernel and parameters and the same experimental design, but
 the observation vector is replaced by $\mu(\x_1), \ldots, \mu(\x_n)$ and the noise variance is set to zero. Since this latter model is
 noise-free, the classical EI can be used as the infill criterion. Once the new design is chosen and the evaluation is performed,
-both kriging models are updated. One particular characteristic of this strategy is that it does not allow repetitions \gaeladd{J'aurais dit le contraire, ce qui indique que j'ai mal compris au moins le terme repetitions (=replicates ??). Sinon, comment faire une moyenne sans repetitions ?} \coralieadd{Je comprends ici que "repetitions" correspond au terme "iteration" que j'emploi habituellement, cad aux nombres d'etapes dans l'optimisation. c'est bien ca ? il faudrait peut etre clarifier le terme}, which is desirable in our
-case.
+both kriging models are updated. 
+% 
+% One particular characteristic of this strategy is that it does not allow repetitions \gaeladd{J'aurais dit le contraire, ce qui indique que j'ai mal compris au moins le terme repetitions (=replicates ??). Sinon, comment faire une moyenne sans repetitions ?} \coralieadd{Je comprends ici que "repetitions" correspond au terme "iteration" que j'emploi habituellement, cad aux nombres d'etapes dans l'optimisation. c'est bien ca ? il faudrait peut etre clarifier le terme}, which is desirable in our
+% case.
 
 \subsection{Bayesian optimization with invariances}
 
 \subsubsection{Definition of local invariances}
-From Section \ref{sec:model}, we observe that there are cases of invariances involving a single or several variables. 
-Here, we formalize the different situations \gaeladd{A-t-on ici l'ensemble des types d'invariance possibles ? Si oui, il faudrait peut etre en parler rapidement pour ne pas parler que de la definition 3 qui n'est pas dans l'illustration de la sharka} and generalize some cases.
+% The numerical model considered here experience different cases of invariance, 
+% involving either a single variable or the combination of several variables.
+% 
+% From Section \ref{sec:model}, we observe that there are cases of invariances involving a single or several variables. 
+% Here, we formalize the different situations \gaeladd{A-t-on ici l'ensemble des types d'invariance possibles ? 
+% Si oui, il faudrait peut etre en parler rapidement pour ne pas parler que de la definition 3 qui n'est pas dans l'illustration de la sharka} and generalize some cases.
+
 
 We first introduce the following notation (this is purely notation, no actual permutation is performed):
 \begin{eqnarray}
@@ -435,7 +447,7 @@ with $\alpha(x_i, c_i)$ an attenuation function such that:
  \item $\alpha$ increases monotonically with $\lvert x_i - c_i\rvert$;
  \item $0 < \alpha \leq 1$, $\forall x_i \neq c_i$.
 \end{enumerate}
-Condition 1 ensures that $\widetilde{\x_j} = \overline{\x_j}$ when $x_i=c_i$ (the J-th dimensions \gaeladd{Les J-emes dimensions ?} collapse).
+Condition 1 ensures that $\widetilde{\x_j} = \overline{\x_j}$ when $x_i=c_i$ (all the dimensions in $J$ collapse).
 
 
 \subsubsection{Warping for a simple invariance}
@@ -464,7 +476,8 @@ the process seems stationary far from the critical value.
 \begin{figure}[!ht]
 \centering
  \includegraphics[width=.8\textwidth]{def2Dsimple.pdf}
- \caption{Three deformations of a 2D space. The local invariance is at $x_1=0$, highlighted with larger lines.}\label{fig:3defsimple} \gaeladd{A quoi servent les couleurs sur ces 4 graphiques ? Si ça represente la valeur de l'output, ne faudrait-il pas le preciser ?}
+ \caption{Three deformations of a 2D space. The local invariance is at $x_1=0$, highlighted with larger lines.}\label{fig:3defsimple} 
+%  \gaeladd{A quoi servent les couleurs sur ces 4 graphiques ? Si ça represente la valeur de l'output, ne faudrait-il pas le preciser ?}
 \end{figure}
 
 \begin{figure}[!ht]
@@ -477,7 +490,7 @@ Linear \hspace{4cm} Exp \hspace{4cm} Gauss
 \subsubsection{Warping for linear invariances}
 % \victor{write everything as a linear condition and not an ``AND'' condition}
 For simplicity, we consider first the particular linear case where $\mathbf{A} = \mathbb{I}_p$ and $\mathbf{b}=\cc_I$, 
-that is where invariances occur when a set of variables takes simultaneously a set of critical values: $\x_I = \cc_I$.
+that is where invariances occur when a set of variables takes simultaneously a set of critical values: $\mathbf{A} \x_I = \mathbf{b}$, or equivalently $\x_I = \cc_I$.
 % On a cubic space, this amounts to imposing invariance on an edge\footnote{such a condition 
 % cannot exist in 2D under the assumption $I \cap J = \emptyset$, since $\card(J) \geq 2$.}. 
 In that case, a possible warping is:
@@ -517,19 +530,6 @@ the warping function is the same as in Equation \ref{eq:and}, with now:
   \alpha(\x_I,  \cc_I) &=& 1 - r_A(\mathbf{A} \x_I, \mathbf{b}).\label{eq:aff}
 \end{eqnarray}
 
-Figure \ref{fig:def3Dedge} shows two deformations of the unit cubic space when $y$ is invariant w.r.t. $x_3$ when 1- $x_1=x_2=0$, and 2-$x_1 = x_2$. 
-On both cases a Gaussian warping (exponential with $d=2$) is applied.
- \begin{figure}[!ht]
- \centering
- \includegraphics[width=.3\textwidth]{def3Dedge.pdf}
- \includegraphics[width=.3\textwidth]{defAND.pdf}
- \includegraphics[width=.3\textwidth]{def3Daff.pdf}
- \caption{ Left: original space (with the critical edge highlighted). Centered: warping for $c_1=0$ AND $c_2=1$.
- Right: warping for $x_1 = x_2$.\gaeladd{Penser a revoir les graduations avant soumission.Par ailleurs, pour faciliter la comparaison entre les 3 cubes, il me semble qu'il faudrait les presenter sous le meme angle.}
- %Note that the axis has been rotated to show the shape of the distorted space.
- }\label{fig:def3Dedge}
-\end{figure}
-
 \subsubsection{Combining warpings}
 
 \paragraph{Independent conditions}
@@ -557,14 +557,6 @@ if any $x_i = c_i$, and the distortion reduces only when \emph{all} the $x_i$'s 
 % (instead of \emph{any} $x_i$, as in Equation \ref{eq:and}).
 % In Equation \ref{eq:or2}, it is important to notice that the $x_k$'s are centered around the $c_k$'s instead of their mean, 
 % to ensure that $\psi(\x_I, \x_J) = (\cc_I, \overline{\x_J})$ if any $x_i = c_i$.
-Figure \ref{fig:def3DORs} shows a deformation of a cubic space when $x_3$ is not influent when $x_1$ or $x_2$ are minimal, when a Gaussian warping (exponential with $d=2$) is applied.
- \begin{figure}[!ht]
- \centering
- \includegraphics[width=.4\textwidth]{def3DORs.pdf}
- \includegraphics[width=.4\textwidth]{def3DOR2s.pdf}
- \caption{Warping for $c_1=4$ (left face of the cube) OR $c_2=1$ (front face). Left: original space, right: distorted space. %Note that the axis has been rotated to show the shape of the distorted space.
- }\label{fig:def3DORs}
-\end{figure}
 
 \paragraph{``Circular'' conditions}
 Difficulty only arises when some variables appear in both $I_l$'s and $J_m$'s sets. Take for instance a ``reciprocal'' condition, 
@@ -586,7 +578,7 @@ In that case, a simple solution is to fix the non influent variable to its criti
 \paragraph{Remark} This formula does not apply in the affine case (Equation \ref{eq:aff}).
 % Unfortunately, there does not seem to be an easy solution for those cases.
 
-We first show the deformations on a 2D space on Figure \ref{fig:def2DOR}, where the two critical values are on the boundaries of $x_1$ and $x_2$.
+We show the deformations on a 2D space on Figure \ref{fig:def2DOR}, where the two critical values are on the boundaries of $x_1$ and $x_2$.
 %, and on Figure \ref{fig:def2DT}, where one critical value is in the middle of the $x_1$ space. 
 Here, the warping of Equation \ref{eq:or2} is applied on each variable ($K=\{1,2\}$). 
 Again, except for the linear warping, the local topology is preserved far from the critical edges. 
@@ -611,22 +603,56 @@ Again, except for the linear warping, the local topology is preserved far from t
 %  \caption{GP realization for a T-shaped ``OR'' invariance.}\label{fig:simu2DT}
 % \end{figure}
 
-As another illustrative example, we consider a cubic space with the following circular conditions:
+\subsubsection{Illustration}
+Finally, Figure \ref{fig:3dwarping} shows four deformations of the unit cubic space, for each of the following invariances:
 \begin{itemize}
- \item $y$ is invariant w.r.t. $x_2$ if $x_1=4$;
- \item $y$ is invariant w.r.t. $x_3$ if $x_2=1$;
- \item $y$ is invariant w.r.t. $x_1$ if $x_3=0$.
+ \item AND: $y$ is invariant w.r.t. $x_3$ when $x_1$ AND $x_2$ are equal to zero (equation \ref{eq:and} with $I=1$ and $J=\{1,2\}$);
+ \item OR: $y$ is invariant w.r.t. $x_3$ when $x_1$ OR $x_2$ are equal to zero  (equation \ref{eq:or0} with $I=1$ and $J=\{1,2\}$);
+ \item LINEAR: $y$ is invariant w.r.t. $x_3$ when $x_1=x_2=0$  (equation \ref{eq:aff} with $I=1$, $J=\{1,2\}$, $\mathbf{A}=[1,-1]$ and $\mathbf{b}=0$);
+ \item CIRCULAR: $y$ is invariant w.r.t. a- $x_2$ if $x_1=0$, b-  $x_3$ if $x_2=0$, c- w.r.t. $x_1$ if $x_3=0$ (equation \ref{eq:or2} with $K=\{1,2,3\}$, $C=[0,0,0]$ and $I_1=3$, $I_2=1$, and $I_3=2$).
 \end{itemize}
-All critical values correspond to the lower bounds of the variables.
-Equation \ref{eq:or2} is applied to each variable, hence with $K=\{1,2,3\}$, $C=[4,1,0]$ and $I_1=3$, $I_2=1$, and $I_3=2$. 
-The original and distorted space are shown in Figure \ref{fig:def3Dcirc}.
+On all cases, a Gaussian warping (exponential with $d=2$) is applied, with range parameter $\theta=0.3$.
 
  \begin{figure}[!ht]
  \centering
- \includegraphics[width=.4\textwidth]{def3Dcirc1.pdf}
- \includegraphics[width=.4\textwidth]{def3Dcirc2.pdf}
- \caption{Warping with circular conditions. Left: original space, right: distorted space.}\label{fig:def3Dcirc}
+ \includegraphics[trim=8mm 5mm 15mm 10mm, clip, width=.4\textwidth]{defAND.pdf}
+  \includegraphics[trim=8mm 5mm 15mm 10mm, clip, width=.4\textwidth]{def3DOR2s.pdf}\\
+ \includegraphics[trim=8mm 5mm 15mm 10mm, clip, width=.4\textwidth]{def3Dlin.pdf}
+ \includegraphics[trim=8mm 5mm 15mm 10mm, clip, width=.4\textwidth]{def3Dcirc2.pdf}\\
+  \includegraphics[trim=8mm 5mm 15mm 10mm, clip, width=.4\textwidth]{def3Dedge.pdf}
+ \caption{Four deformations of the unit cube under different invariances: AND (top left), OR (top right), LINEAR (middle left), CIRCULAR (middle right). 
+ The bottom figure shows the orginal space. 
+%  Left: original space (with the critical edge highlighted). Centered: warping for $c_1=0$ AND $c_2=1$.
+%  Right: warping for $x_1 = x_2$. Warping with circular conditions. Right: distorted space.
+%  Warping for $c_1=4$ (left face of the cube) OR $c_2=1$ (front face).
+ %Note that the axis has been rotated to show the shape of the distorted space.
+ }\label{fig:3dwarping}
 \end{figure}
+
+% Figure \ref{fig:def3DORs} shows a deformation of a cubic space when $x_3$ is not influent when $x_1$ or $x_2$ are minimal, when a Gaussian warping (exponential with $d=2$) is applied.
+
+%  \begin{figure}[!ht]
+%  \centering
+% %  \includegraphics[width=.4\textwidth]{def3DORs.pdf}
+%  \includegraphics[width=.4\textwidth]{def3DOR2s.pdf}
+%  \caption{Warping for $c_1=4$ (left face of the cube) OR $c_2=1$ (front face). Left: original space, right: distorted space. %Note that the axis has been rotated to show the shape of the distorted space.
+%  }\label{fig:def3DORs}
+% \end{figure}
+
+% As another illustrative example, we consider a cubic space with the following circular conditions:
+% \begin{itemize}
+%  \item $y$ is invariant w.r.t. $x_2$ if $x_1=4$;
+%  \item $y$ is invariant w.r.t. $x_3$ if $x_2=1$;
+%  \item $y$ is invariant w.r.t. $x_1$ if $x_3=0$.
+% \end{itemize}
+% All critical values correspond to the lower bounds of the variables.
+
+%  \begin{figure}[!ht]
+%  \centering
+% %  \includegraphics[width=.4\textwidth]{def3Dcirc1.pdf}
+%  \includegraphics[width=.4\textwidth]{def3Dcirc2.pdf}
+%  \caption{Warping with circular conditions. Left: original space, right: distorted space.}\label{fig:def3Dcirc}
+% \end{figure}
 
 % \section{Experiments on toy problems}\label{sec:exp}
 % 
@@ -646,7 +672,8 @@ However, we found in our numerical experiments that choosing the same correlatio
 the warping ranges to be 1/10th of the GP ones provided very satisfactory results, while avoiding the extra computational burden.
 
 Note that in the case of linear invariances, choosing the range of the correlation $r_A$ is non-trivial, as it is not directly linked to design variables. 
-A possible solution is $\theta_A = \mathbf{A}^T \boldsymbol{\theta}_I$. \gaeladd{Notation a expliciter ici.}
+A possible solution is $\theta_A = \mathbf{A}^T \boldsymbol{\theta}_I$. 
+% \gaeladd{Notation a expliciter ici.}
 
 \section{A warping-based Bayesian optimization of the Sharka model}\label{sec:sharka}
 
@@ -737,7 +764,8 @@ numerous other parameters do not influence the model results.
 
 To tackle this problem, we proposed to use a warping of the input space, that here amounted to remove locally dimensions of the input space.
 The warping we used is based on correlation functions, making it very simple to implement while allowing sufficient flexibility.
-A particular advantage of input warping over other approaches is that it can be straightforwardly embedded in a BO algorithm. \gaeladd{ne faudrait-il pas developper un peu cet argument qui permet d'indiquer la plus-value de l'approche par rapport à ce qui existe deja ?}
+A particular advantage of input warping over other approaches is that it can be straightforwardly embedded in a BO algorithm. 
+\gaeladd{ne faudrait-il pas developper un peu cet argument qui permet d'indiquer la plus-value de l'approche par rapport à ce qui existe deja ?}
 % 
 % In order to tackle invariances due to the management parameters, we adapted a Bayesian optimization algorithm by including a warping to the parameter space.
 
